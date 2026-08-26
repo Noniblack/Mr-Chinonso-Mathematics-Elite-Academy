@@ -1,0 +1,9 @@
+{
+  "name": "Mr Chinonso Mathematics Elite Academy",
+  "short_name": "Mr Chinonso Maths",
+  "description": "Secondary and pre-university Mathematics learning hub.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1f3a",
+  "theme_color": "#0b1f3a"
+}
