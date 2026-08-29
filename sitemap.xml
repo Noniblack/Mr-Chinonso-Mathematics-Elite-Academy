@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN.com/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/#about</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/#curriculum</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/#courses</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/#resources</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/#youtube</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/#enquiry</loc></url>
+  <url>
+    <loc>https://mrchinonsomathsacademy.com/</loc>
+  </url>
 </urlset>
