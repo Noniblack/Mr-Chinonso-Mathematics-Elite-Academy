@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://mrchinonsomathsacademy.com/</loc>
-  </url>
-
-  <url>
-    <loc>https://mrchinonsomathsacademy.com/waec-mathematics.html</loc>
-  </url>
-
-  <url>
-    <loc>https://mrchinonsomathsacademy.com/quadratic-equations.html</loc>
-  </url>
-
-  <url>
-    <loc>https://mrchinonsomathsacademy.com/number-base-system.html</loc>
-  </url>
-
+  <url><loc>https://mrchinonsomathsacademy.com/</loc></url>
+  <url><loc>https://mrchinonsomathsacademy.com/waec-mathematics.html</loc></url>
+  <url><loc>https://mrchinonsomathsacademy.com/quadratic-equations.html</loc></url>
+  <url><loc>https://mrchinonsomathsacademy.com/number-base-system.html</loc></url>
+  <url><loc>https://mrchinonsomathsacademy.com/quadratic-functions.html</loc></url>
 </urlset>
