@@ -736,6 +736,342 @@
     </div>
   </div>
 </section>
+
+<section class="section" id="quadratic-self-assessment">
+  <div class="container">
+    <div class="kicker">ELITE MASTERY ASSESSMENT</div>
+    <h2>Quadratic Equations: Test Your Mastery</h2>
+    <p>Answer all 10 questions. Each question carries one mark. Submit your answers to receive your score, explanations and recommended lessons to review.</p>
+
+    <style>
+      #quadratic-self-assessment .qa-question {
+        border: 1px solid #d9e0e8;
+        border-radius: 12px;
+        padding: 18px;
+        margin: 18px 0;
+        background: #fff;
+      }
+      #quadratic-self-assessment .qa-question h3 {
+        margin-top: 0;
+      }
+      #quadratic-self-assessment .qa-option {
+        display: block;
+        padding: 9px 10px;
+        margin: 7px 0;
+        border-radius: 7px;
+        cursor: pointer;
+        background: #f5f7fa;
+      }
+      #quadratic-self-assessment .qa-option input {
+        margin-right: 9px;
+      }
+      #quadratic-self-assessment .qa-feedback {
+        display: none;
+        padding: 12px;
+        margin-top: 12px;
+        border-radius: 8px;
+        background: #edf4ff;
+      }
+      #quadratic-self-assessment .qa-correct {
+        border-left: 4px solid #16803c;
+      }
+      #quadratic-self-assessment .qa-incorrect {
+        border-left: 4px solid #bd3434;
+      }
+      #quadratic-self-assessment .qa-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+      #quadratic-self-assessment .qa-result {
+        display: none;
+        margin-top: 24px;
+        padding: 20px;
+        border: 2px solid #cbd5e1;
+        border-radius: 12px;
+      }
+      #quadratic-self-assessment .qa-result h3 {
+        margin-top: 0;
+      }
+      #quadratic-self-assessment .qa-review-list {
+        padding-left: 22px;
+      }
+      #quadratic-self-assessment button {
+        cursor: pointer;
+      }
+      #quadratic-self-assessment .qa-note {
+        font-size: .94em;
+        opacity: .85;
+      }
+    </style>
+
+    <form id="qa-quiz-form">
+      <div class="qa-question" data-question="1" data-lesson="Lesson 1">
+        <h3>Question 1 of 10</h3>
+        <p>For the equation 3x² − 7x + 2 = 0, what are the coefficients (a, b, c)?</p>
+        <label class="qa-option"><input type="radio" name="qa1" value="A"> A. (3, −7, 2)</label>
+        <label class="qa-option"><input type="radio" name="qa1" value="B"> B. (3, 7, 2)</label>
+        <label class="qa-option"><input type="radio" name="qa1" value="C"> C. (−7, 3, 2)</label>
+        <label class="qa-option"><input type="radio" name="qa1" value="D"> D. (3, −7, −2)</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="2" data-lesson="Lesson 2">
+        <h3>Question 2 of 10</h3>
+        <p>Write 4x² + 7x = 9 in standard form.</p>
+        <label class="qa-option"><input type="radio" name="qa2" value="A"> A. 4x² + 7x − 9 = 0</label>
+        <label class="qa-option"><input type="radio" name="qa2" value="B"> B. 4x² + 7x + 9 = 0</label>
+        <label class="qa-option"><input type="radio" name="qa2" value="C"> C. 4x² − 7x − 9 = 0</label>
+        <label class="qa-option"><input type="radio" name="qa2" value="D"> D. 4x² + 7x = 0</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="3" data-lesson="Lesson 3">
+        <h3>Question 3 of 10</h3>
+        <p>Which is the correct factorisation of x² − 5x + 6 = 0?</p>
+        <label class="qa-option"><input type="radio" name="qa3" value="A"> A. (x − 2)(x − 3) = 0</label>
+        <label class="qa-option"><input type="radio" name="qa3" value="B"> B. (x + 2)(x + 3) = 0</label>
+        <label class="qa-option"><input type="radio" name="qa3" value="C"> C. (x − 1)(x − 6) = 0</label>
+        <label class="qa-option"><input type="radio" name="qa3" value="D"> D. (x + 2)(x − 3) = 0</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="4" data-lesson="Lesson 3">
+        <h3>Question 4 of 10</h3>
+        <p>Solve x² − 7x + 12 = 0.</p>
+        <label class="qa-option"><input type="radio" name="qa4" value="A"> A. x = 3 or x = 4</label>
+        <label class="qa-option"><input type="radio" name="qa4" value="B"> B. x = −3 or x = −4</label>
+        <label class="qa-option"><input type="radio" name="qa4" value="C"> C. x = 2 or x = 6</label>
+        <label class="qa-option"><input type="radio" name="qa4" value="D"> D. x = −3 or x = 4</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="5" data-lesson="Lesson 3">
+        <h3>Question 5 of 10</h3>
+        <p>Rearranging x² + 6x + 5 = 0 by completing the square gives which equation?</p>
+        <label class="qa-option"><input type="radio" name="qa5" value="A"> A. (x + 3)² = 4</label>
+        <label class="qa-option"><input type="radio" name="qa5" value="B"> B. (x + 3)² = 5</label>
+        <label class="qa-option"><input type="radio" name="qa5" value="C"> C. (x − 3)² = 4</label>
+        <label class="qa-option"><input type="radio" name="qa5" value="D"> D. (x + 3)² = −4</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="6" data-lesson="Lesson 3">
+        <h3>Question 6 of 10</h3>
+        <p>What is the discriminant b² − 4ac for 2x² + x − 3 = 0?</p>
+        <label class="qa-option"><input type="radio" name="qa6" value="A"> A. 25</label>
+        <label class="qa-option"><input type="radio" name="qa6" value="B"> B. −23</label>
+        <label class="qa-option"><input type="radio" name="qa6" value="C"> C. 13</label>
+        <label class="qa-option"><input type="radio" name="qa6" value="D"> D. 1</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="7" data-lesson="Lesson 3">
+        <h3>Question 7 of 10</h3>
+        <p>Solve x² + 4x − 1 = 0.</p>
+        <label class="qa-option"><input type="radio" name="qa7" value="A"> A. x = −2 ± √5</label>
+        <label class="qa-option"><input type="radio" name="qa7" value="B"> B. x = 2 ± √5</label>
+        <label class="qa-option"><input type="radio" name="qa7" value="C"> C. x = −4 ± √5</label>
+        <label class="qa-option"><input type="radio" name="qa7" value="D"> D. x = −2 ± √3</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="8" data-lesson="Lesson 4">
+        <h3>Question 8 of 10</h3>
+        <p>Is x = 4 a solution of x² − 5x + 6 = 0?</p>
+        <label class="qa-option"><input type="radio" name="qa8" value="A"> A. Yes, because the expression equals 0</label>
+        <label class="qa-option"><input type="radio" name="qa8" value="B"> B. No, because the expression equals 2</label>
+        <label class="qa-option"><input type="radio" name="qa8" value="C"> C. No, because the expression equals −2</label>
+        <label class="qa-option"><input type="radio" name="qa8" value="D"> D. Yes, because the expression equals 2</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="9" data-lesson="Lesson 4">
+        <h3>Question 9 of 10</h3>
+        <p>A rectangle has width x cm and length (x + 3) cm. Its area is 54 cm². What are its physical dimensions?</p>
+        <label class="qa-option"><input type="radio" name="qa9" value="A"> A. Width 6 cm and length 9 cm</label>
+        <label class="qa-option"><input type="radio" name="qa9" value="B"> B. Width 9 cm and length 12 cm</label>
+        <label class="qa-option"><input type="radio" name="qa9" value="C"> C. Width 3 cm and length 18 cm</label>
+        <label class="qa-option"><input type="radio" name="qa9" value="D"> D. Width −9 cm and length 6 cm</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <div class="qa-question" data-question="10" data-lesson="Lesson 5">
+        <h3>Question 10 of 10</h3>
+        <p>If factorisation is difficult or does not produce simple factors, which method can generally be used to solve a quadratic equation?</p>
+        <label class="qa-option"><input type="radio" name="qa10" value="A"> A. Use only factorisation</label>
+        <label class="qa-option"><input type="radio" name="qa10" value="B"> B. Use the quadratic formula</label>
+        <label class="qa-option"><input type="radio" name="qa10" value="C"> C. Discard a negative root without solving</label>
+        <label class="qa-option"><input type="radio" name="qa10" value="D"> D. Set the x² term to zero</label>
+        <div class="qa-feedback" aria-live="polite"></div>
+      </div>
+
+      <p class="qa-note">Assessment guidance: answer every question before submitting. Your answers are marked in this browser; this version does not save your score to an account.</p>
+
+      <div class="qa-actions">
+        <button class="btn primary" type="submit">Submit Assessment</button>
+        <button class="btn secondary" type="button" id="qa-reset">Try Again</button>
+      </div>
+    </form>
+
+    <div class="qa-result" id="qa-result" role="status" aria-live="polite" tabindex="-1">
+      <h3 id="qa-result-heading">Your Assessment Result</h3>
+      <p id="qa-score"></p>
+      <p id="qa-message"></p>
+      <h4>Recommended lessons to review</h4>
+      <ul class="qa-review-list" id="qa-review-list"></ul>
+      <p><a class="btn secondary" href="#learning-path">Return to the Learning Foundation</a></p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const form = document.getElementById("qa-quiz-form");
+      const result = document.getElementById("qa-result");
+      const scoreOutput = document.getElementById("qa-score");
+      const messageOutput = document.getElementById("qa-message");
+      const reviewList = document.getElementById("qa-review-list");
+      const resultHeading = document.getElementById("qa-result-heading");
+      const resetButton = document.getElementById("qa-reset");
+
+      if (!form || !result || !resetButton) return;
+
+      const answers = {
+        1: {
+          correct: "A",
+          explanation: "In ax² + bx + c = 0, a is the coefficient of x², b is the coefficient of x, and c is the constant. Therefore (a, b, c) = (3, −7, 2).",
+          lesson: "Lesson 1 — Foundations and coefficients"
+        },
+        2: {
+          correct: "A",
+          explanation: "Subtract 9 from both sides to obtain 4x² + 7x − 9 = 0.",
+          lesson: "Lesson 2 — Recognising and classifying quadratic equations"
+        },
+        3: {
+          correct: "A",
+          explanation: "The numbers −2 and −3 multiply to give 6 and add to give −5, so x² − 5x + 6 = (x − 2)(x − 3).",
+          lesson: "Lesson 3 — Choosing and applying a solution method"
+        },
+        4: {
+          correct: "A",
+          explanation: "Factorise as (x − 3)(x − 4) = 0. Hence x = 3 or x = 4.",
+          lesson: "Lesson 3 — Factorisation and roots"
+        },
+        5: {
+          correct: "A",
+          explanation: "x² + 6x + 5 = 0 becomes x² + 6x = −5. Add 9 to both sides: (x + 3)² = 4.",
+          lesson: "Lesson 3 — Completing the square"
+        },
+        6: {
+          correct: "A",
+          explanation: "Here a = 2, b = 1 and c = −3. The discriminant is 1² − 4(2)(−3) = 1 + 24 = 25.",
+          lesson: "Lesson 3 — The quadratic formula and discriminant"
+        },
+        7: {
+          correct: "A",
+          explanation: "The quadratic formula gives x = (−4 ± √(16 + 4))/2 = (−4 ± √20)/2 = −2 ± √5.",
+          lesson: "Lesson 3 — The quadratic formula"
+        },
+        8: {
+          correct: "B",
+          explanation: "Substitute x = 4: 4² − 5(4) + 6 = 16 − 20 + 6 = 2, not 0. Therefore x = 4 is not a root.",
+          lesson: "Lesson 4 — Checking solutions by substitution"
+        },
+        9: {
+          correct: "A",
+          explanation: "x(x + 3) = 54 gives x² + 3x − 54 = 0 = (x + 9)(x − 6). The roots are −9 and 6; reject −9 because a physical width cannot be negative. Width = 6 cm and length = 9 cm.",
+          lesson: "Lesson 4 — Interpreting contextual answers"
+        },
+        10: {
+          correct: "B",
+          explanation: "The quadratic formula works for every quadratic equation with a ≠ 0, although the type of roots depends on the discriminant.",
+          lesson: "Lesson 5 — Examination mastery and problem-solving strategy"
+        }
+      };
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let score = 0;
+        const missedLessons = new Set();
+        const questions = form.querySelectorAll(".qa-question");
+
+        questions.forEach(function (question) {
+          const number = question.dataset.question;
+          const selected = form.querySelector('input[name="qa' + number + '"]:checked');
+          const feedback = question.querySelector(".qa-feedback");
+          const item = answers[number];
+
+          feedback.style.display = "block";
+          feedback.classList.remove("qa-correct", "qa-incorrect");
+
+          if (selected && selected.value === item.correct) {
+            score += 1;
+            feedback.classList.add("qa-correct");
+            feedback.innerHTML = "<strong>Correct!</strong> " + item.explanation;
+          } else {
+            feedback.classList.add("qa-incorrect");
+            const chosenText = selected
+              ? "Your answer: " + selected.value + ". "
+              : "You did not select an answer. ";
+            feedback.innerHTML = "<strong>Not quite.</strong> " +
+              chosenText + "Correct answer: " + item.correct + ". " +
+              item.explanation;
+            missedLessons.add(item.lesson);
+          }
+        });
+
+        const percentage = score * 10;
+        result.style.display = "block";
+        resultHeading.textContent = "Assessment Complete";
+        scoreOutput.textContent = "Your score: " + score + " / 10 (" + percentage + "%).";
+
+        if (score === 10) {
+          messageOutput.textContent = "Outstanding! You answered every question correctly. Continue to more challenging applications.";
+        } else if (score >= 8) {
+          messageOutput.textContent = "Very good work! Review the explanations for the questions you missed, then try again to aim for full marks.";
+        } else if (score >= 5) {
+          messageOutput.textContent = "Good effort. Review the recommended lessons below and repeat the assessment to strengthen your understanding.";
+        } else {
+          messageOutput.textContent = "Use this result as a learning guide. Revisit the recommended lessons carefully, work through the examples, and then attempt the assessment again.";
+        }
+
+        reviewList.replaceChildren();
+        if (missedLessons.size === 0) {
+          const item = document.createElement("li");
+          item.textContent = "No lesson review is required based on this attempt. Try a more challenging set of questions.";
+          reviewList.appendChild(item);
+        } else {
+          missedLessons.forEach(function (lesson) {
+            const item = document.createElement("li");
+            item.textContent = lesson;
+            reviewList.appendChild(item);
+          });
+        }
+
+        result.scrollIntoView({ behavior: "smooth", block: "start" });
+        result.focus({ preventScroll: true });
+      });
+
+      resetButton.addEventListener("click", function () {
+        form.reset();
+        form.querySelectorAll(".qa-feedback").forEach(function (feedback) {
+          feedback.style.display = "none";
+          feedback.classList.remove("qa-correct", "qa-incorrect");
+          feedback.textContent = "";
+        });
+        result.style.display = "none";
+        scoreOutput.textContent = "";
+        messageOutput.textContent = "";
+        reviewList.replaceChildren();
+        resultHeading.textContent = "Your Assessment Result";
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    })();
+  </script>
+</section>
+
 <section class="section"><div class="container"><div class="kicker">FREQUENT QUESTIONS</div><h2>Quadratic Equations FAQ</h2><div class="faq"><strong>What makes an equation quadratic?</strong><p>Its highest power of the variable is 2, and it can be represented in the standard form ax² + bx + c = 0 with a ≠ 0.</p></div><div class="faq"><strong>Which method should I use to solve a quadratic equation?</strong><p>It depends on the structure of the equation. A strong learner should be able to recognise suitable methods and verify the resulting solutions.</p></div><div class="faq"><strong>Is completing the square useful beyond solving equations?</strong><p>Yes. It provides an important connection between quadratic equations, perfect squares, vertex form and graphical interpretation.</p></div><div class="faq"><strong>Can quadratic equations be used in examination preparation?</strong><p>Yes. The mathematical concepts can be developed through progressively challenging practice and then applied to the relevant requirements of an examination pathway.</p></div></div></section>
 <section class="section"><div class="container"><div class="cta"><div class="kicker">BUILD YOUR MASTERY</div><h2>Ready to go deeper into Quadratic Equations?</h2><p>Contact Mr Chinonso Mathematics Elite Academy for structured Mathematics learning, topic guidance and tutoring support.</p><div class="actions"><a class="btn primary" href="https://wa.me/2348063357348">Chat on WhatsApp</a><a class="btn secondary" href="waec-mathematics.html">WAEC Mathematics Hub</a></div></div></div></section>
 </main><footer><div class="container"><div class="footer-row"><div><strong>Mr Chinonso Mathematics Elite Academy</strong><p>Mathematics education from foundation to elite application.</p></div><div><a href="https://www.youtube.com/@WAECandIGCSEMATHSCOACH">YouTube</a> · <a href="https://wa.me/2348063357348">WhatsApp</a> · <a href="index.html">Academy Home</a></div></div><div class="copyright">© Mr Chinonso Mathematics Elite Academy. Educational alignment does not imply endorsement by any examination board.</div></div></footer>
