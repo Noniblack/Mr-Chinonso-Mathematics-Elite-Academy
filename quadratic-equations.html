@@ -1072,6 +1072,490 @@
   </script>
 </section>
 
+<!-- QUADRATIC EQUATIONS: ELITE CHALLENGE -->
+<section class="section alt" id="quadratic-elite-challenge">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">ADVANCED ASSESSMENT</span>
+      <h2>Quadratic Equations: Elite Challenge</h2>
+      <p>
+        Test your mastery with 20 challenging multiple-choice questions
+        covering roots, discriminants, inequalities, quadratic functions,
+        modelling and examination applications.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Assessment Instructions</h3>
+      <ul>
+        <li>There are 20 questions, worth 1 mark each.</li>
+        <li>The maximum score is 20 marks.</li>
+        <li>Select one answer for each question.</li>
+        <li>Unanswered questions receive zero marks.</li>
+        <li>Submit your answers to see your score, explanations and study recommendations.</li>
+      </ul>
+      <p><strong>Tip:</strong> Work carefully and check your calculations before submitting.</p>
+    </div>
+
+    <form id="elite-challenge-form" class="card">
+      <div id="elite-challenge-questions"></div>
+
+      <div class="actions" style="margin-top:24px;">
+        <button class="btn primary" type="submit">
+          Submit Elite Challenge
+        </button>
+        <button class="btn secondary" type="button" id="elite-challenge-reset">
+          Try Again
+        </button>
+      </div>
+    </form>
+
+    <div id="elite-challenge-result" class="card" hidden aria-live="polite">
+      <h3>Elite Challenge Results</h3>
+      <p id="elite-challenge-score"></p>
+      <p id="elite-challenge-message"></p>
+      <h4>Review and Explanations</h4>
+      <div id="elite-challenge-review"></div>
+      <h4>Recommended Next Steps</h4>
+      <ul id="elite-challenge-recommendations"></ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  #quadratic-elite-challenge .elite-question {
+    padding: 18px 0;
+    border-bottom: 1px solid #d8dee8;
+  }
+
+  #quadratic-elite-challenge .elite-question:last-child {
+    border-bottom: 0;
+  }
+
+  #quadratic-elite-challenge .elite-question h4 {
+    margin-bottom: 12px;
+  }
+
+  #quadratic-elite-challenge .elite-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 1px solid #d8dee8;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  #quadratic-elite-challenge .elite-option input {
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  #quadratic-elite-challenge .elite-option:has(input:checked) {
+    border-color: #456bb3;
+    background: #f1f5ff;
+  }
+
+  #quadratic-elite-challenge .elite-review-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #d8dee8;
+  }
+
+  #quadratic-elite-challenge .elite-review-item:last-child {
+    border-bottom: 0;
+  }
+
+  #quadratic-elite-challenge .elite-correct {
+    color: #187044;
+    font-weight: 700;
+  }
+
+  #quadratic-elite-challenge .elite-incorrect {
+    color: #a52b2b;
+    font-weight: 700;
+  }
+
+  #quadratic-elite-challenge [hidden] {
+    display: none !important;
+  }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  const root = document.getElementById("quadratic-elite-challenge");
+
+  if (!root || root.dataset.initialized === "true") {
+    return;
+  }
+
+  root.dataset.initialized = "true";
+
+  const questions = [
+    {
+      q: "If x² − 6x + k = 0 has equal roots, find k.",
+      o: ["6", "9", "12", "36"],
+      a: 1,
+      lesson: 3,
+      e: "Equal roots occur when the discriminant is zero. Thus 36 − 4k = 0, so k = 9."
+    },
+    {
+      q: "For which values of k does x² + 4x + k = 0 have no real roots?",
+      o: ["k < 4", "k = 4", "k > 4", "k ≤ 4"],
+      a: 2,
+      lesson: 3,
+      e: "There are no real roots when the discriminant is negative: 16 − 4k < 0. Therefore k > 4."
+    },
+    {
+      q: "Find the sum of the roots of 2x² − 7x + 3 = 0.",
+      o: ["−7/2", "7/2", "3/2", "−3/2"],
+      a: 1,
+      lesson: 3,
+      e: "For ax² + bx + c = 0, the sum of the roots is −b/a. Here it is −(−7)/2 = 7/2."
+    },
+    {
+      q: "Find the product of the roots of 3x² + 5x − 2 = 0.",
+      o: ["−2/3", "2/3", "5/3", "−5/3"],
+      a: 0,
+      lesson: 3,
+      e: "The product of the roots is c/a. Therefore the product is −2/3."
+    },
+    {
+      q: "Solve 2x² − 3x − 2 = 0.",
+      o: [
+        "x = 2 or x = −1/2",
+        "x = −2 or x = 1/2",
+        "x = 2 or x = 1/2",
+        "x = −2 or x = −1/2"
+      ],
+      a: 0,
+      lesson: 3,
+      e: "Factorise: (2x + 1)(x − 2) = 0. Thus x = −1/2 or x = 2."
+    },
+    {
+      q: "Solve 3/(x − 1) = x, given x ≠ 1.",
+      o: [
+        "x = (1 ± √13)/2",
+        "x = (−1 ± √13)/2",
+        "x = 1 or x = 3",
+        "x = −3 or x = 1"
+      ],
+      a: 0,
+      lesson: 4,
+      e: "Multiply by x − 1 to obtain 3 = x(x − 1), so x² − x − 3 = 0. The quadratic formula gives x = (1 ± √13)/2. Neither root is 1, so both are valid."
+    },
+    {
+      q: "Solve x⁴ − 5x² + 4 = 0.",
+      o: [
+        "x = ±1 only",
+        "x = ±2 only",
+        "x = −2, −1, 1, 2",
+        "x = −4, −1, 1, 4"
+      ],
+      a: 2,
+      lesson: 3,
+      e: "Let y = x². Then y² − 5y + 4 = 0, so (y − 1)(y − 4) = 0. Hence x² = 1 or x² = 4, giving x = −2, −1, 1 or 2."
+    },
+    {
+      q: "Solve (x − 2)² = 3x + 4.",
+      o: [
+        "x = 0 or x = 7",
+        "x = −1 or x = 4",
+        "x = −4 or x = 1",
+        "x = −1 or x = 3"
+      ],
+      a: 0,
+      lesson: 3,
+      e: "Expand to get x² − 4x + 4 = 3x + 4. Simplifying gives x² − 7x = 0, so x(x − 7) = 0. Therefore x = 0 or x = 7."
+    },
+    {
+      q: "For which values of x is x² − 5x + 6 > 0?",
+      o: [
+        "2 < x < 3",
+        "x < 2 or x > 3",
+        "x ≤ 2 or x ≥ 3",
+        "x > 2 and x < 3"
+      ],
+      a: 1,
+      lesson: 4,
+      e: "Factorise as (x − 2)(x − 3). The parabola opens upwards, so the expression is positive outside the roots: x < 2 or x > 3."
+    },
+    {
+      q: "Solve the inequality x² − 4x − 5 ≤ 0.",
+      o: [
+        "x < −1 or x > 5",
+        "−1 ≤ x ≤ 5",
+        "−5 ≤ x ≤ 1",
+        "x ≤ −5 or x ≥ 1"
+      ],
+      a: 1,
+      lesson: 4,
+      e: "Factorise: (x − 5)(x + 1) ≤ 0. The expression is non-positive between the roots, including the endpoints. Thus −1 ≤ x ≤ 5."
+    },
+    {
+      q: "For which interval is x² + 2x − 8 negative?",
+      o: [
+        "x < −4 or x > 2",
+        "−4 < x < 2",
+        "−2 < x < 4",
+        "x < −2 or x > 4"
+      ],
+      a: 1,
+      lesson: 4,
+      e: "Factorise: (x + 4)(x − 2). Since the parabola opens upwards, it is negative between its roots: −4 < x < 2."
+    },
+    {
+      q: "Find the minimum value of f(x) = x² − 8x + 11.",
+      o: ["−5", "−4", "−11", "5"],
+      a: 0,
+      lesson: 5,
+      e: "Complete the square: x² − 8x + 11 = (x − 4)² − 5. Since a square is non-negative, the minimum value is −5."
+    },
+    {
+      q: "Find the maximum value of f(x) = −2x² + 12x − 7.",
+      o: ["11", "18", "7", "−11"],
+      a: 0,
+      lesson: 5,
+      e: "The vertex occurs at x = −b/(2a) = −12/(−4) = 3. Substituting gives f(3) = −18 + 36 − 7 = 11."
+    },
+    {
+      q: "The axis of symmetry of y = x² + px + 7 is x = 3. Find p.",
+      o: ["6", "−6", "3", "−3"],
+      a: 1,
+      lesson: 5,
+      e: "The axis of symmetry is x = −p/2. Therefore −p/2 = 3, giving p = −6."
+    },
+    {
+      q: "The roots of x² − 7x + k = 0 are positive integers that differ by 1. Find k.",
+      o: ["10", "12", "14", "18"],
+      a: 1,
+      lesson: 5,
+      e: "The roots sum to 7 and differ by 1. They must be 3 and 4, whose product is 12. Hence k = 12."
+    },
+    {
+      q: "A rectangle has width x metres and length (x + 5) metres. Its area is 84 m². Find its dimensions.",
+      o: [
+        "7 m by 12 m",
+        "6 m by 11 m",
+        "8 m by 13 m",
+        "4 m by 9 m"
+      ],
+      a: 0,
+      lesson: 4,
+      e: "x(x + 5) = 84 gives x² + 5x − 84 = 0, or (x + 12)(x − 7) = 0. Reject x = −12 because a length must be positive. The dimensions are 7 m by 12 m."
+    },
+    {
+      q: "A ball's height is h = −5t² + 20t + 1 metres after t seconds. At what time does it reach its maximum height?",
+      o: ["1 second", "2 seconds", "4 seconds", "5 seconds"],
+      a: 1,
+      lesson: 5,
+      e: "The maximum occurs at the vertex, where t = −b/(2a) = −20/(−10) = 2 seconds."
+    },
+    {
+      q: "The product of two consecutive positive integers is 182. Find the integers.",
+      o: [
+        "12 and 13",
+        "13 and 14",
+        "14 and 15",
+        "10 and 11"
+      ],
+      a: 1,
+      lesson: 4,
+      e: "Let the integers be n and n + 1. Then n² + n − 182 = 0, which factorises to (n + 14)(n − 13) = 0. Since n is positive, n = 13. The integers are 13 and 14."
+    },
+    {
+      q: "If α and β are the roots of x² − 4x + 1 = 0, find α² + β².",
+      o: ["14", "16", "2", "18"],
+      a: 0,
+      lesson: 5,
+      e: "α + β = 4 and αβ = 1. Using α² + β² = (α + β)² − 2αβ gives 16 − 2 = 14."
+    },
+    {
+      q: "A rectangle has perimeter 34 cm and area 60 cm². What are its dimensions?",
+      o: [
+        "5 cm by 12 cm",
+        "6 cm by 10 cm",
+        "4 cm by 15 cm",
+        "7 cm by 10 cm"
+      ],
+      a: 0,
+      lesson: 4,
+      e: "If length is l and width is w, then l + w = 17 and lw = 60. Thus the dimensions are roots of z² − 17z + 60 = 0 = (z − 5)(z − 12). The dimensions are 5 cm by 12 cm."
+    }
+  ];
+
+  const form = root.querySelector("#elite-challenge-form");
+  const questionHost = root.querySelector("#elite-challenge-questions");
+  const resultPanel = root.querySelector("#elite-challenge-result");
+  const scoreText = root.querySelector("#elite-challenge-score");
+  const messageText = root.querySelector("#elite-challenge-message");
+  const reviewHost = root.querySelector("#elite-challenge-review");
+  const recommendationsHost = root.querySelector("#elite-challenge-recommendations");
+  const resetButton = root.querySelector("#elite-challenge-reset");
+
+  function createElement(tag, className, textContent) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (textContent !== undefined) element.textContent = textContent;
+    return element;
+  }
+
+  function renderQuestions() {
+    questionHost.replaceChildren();
+
+    questions.forEach(function (question, index) {
+      const article = createElement("article", "elite-question");
+      const heading = createElement(
+        "h4",
+        "",
+        "Question " + (index + 1) + " of " + questions.length
+      );
+      const prompt = createElement("p", "", question.q);
+
+      article.append(heading, prompt);
+
+      question.o.forEach(function (option, optionIndex) {
+        const label = createElement("label", "elite-option");
+        const input = document.createElement("input");
+
+        input.type = "radio";
+        input.name = "elite-question-" + index;
+        input.value = String(optionIndex);
+
+        const optionText = createElement(
+          "span",
+          "",
+          String.fromCharCode(65 + optionIndex) + ". " + option
+        );
+
+        label.append(input, optionText);
+        article.append(label);
+      });
+
+      questionHost.append(article);
+    });
+  }
+
+  function renderResults() {
+    let score = 0;
+    const missedLessons = new Set();
+    reviewHost.replaceChildren();
+    recommendationsHost.replaceChildren();
+
+    questions.forEach(function (question, index) {
+      const selected = form.querySelector(
+        'input[name="elite-question-' + index + '"]:checked'
+      );
+
+      const selectedIndex = selected ? Number(selected.value) : -1;
+      const correct = selectedIndex === question.a;
+
+      if (correct) {
+        score += 1;
+      } else {
+        missedLessons.add(question.lesson);
+      }
+
+      const item = createElement("div", "elite-review-item");
+      const heading = createElement(
+        "p",
+        correct ? "elite-correct" : "elite-incorrect",
+        "Question " + (index + 1) + ": " +
+          (correct ? "Correct — 1/1 mark" : "Incorrect or unanswered — 0/1 mark")
+      );
+
+      const yourAnswer = selectedIndex === -1
+        ? "Your answer: Not answered."
+        : "Your answer: " + question.o[selectedIndex];
+
+      const answerText = createElement("p", "", yourAnswer);
+      const correctText = createElement(
+        "p",
+        "",
+        "Correct answer: " + question.o[question.a]
+      );
+      const explanation = createElement("p", "", "Explanation: " + question.e);
+
+      item.append(heading, answerText, correctText, explanation);
+      reviewHost.append(item);
+    });
+
+    const percentage = Math.round((score / questions.length) * 100);
+
+    scoreText.textContent =
+      "Your score: " + score + " / " + questions.length +
+      " (" + percentage + "%).";
+
+    if (score === 20) {
+      messageText.textContent =
+        "Outstanding! You achieved full marks. Continue with advanced applications and timed examination practice.";
+    } else if (percentage >= 80) {
+      messageText.textContent =
+        "Excellent performance. Review the explanations for any missed questions and continue challenging yourself.";
+    } else if (percentage >= 60) {
+      messageText.textContent =
+        "Good progress. Study the explanations for the questions you missed, then attempt the challenge again.";
+    } else {
+      messageText.textContent =
+        "Use this attempt as a learning guide. Revisit the recommended lessons, practise the worked examples, and try again.";
+    }
+
+    const lessonDescriptions = {
+      1: "Lesson 1 — Foundations, objectives and prerequisites",
+      2: "Lesson 2 — Recognising and classifying quadratic equations",
+      3: "Lesson 3 — Choosing and applying a solution method",
+      4: "Lesson 4 — Checking solutions and interpreting answers",
+      5: "Lesson 5 — Examination mastery and problem-solving strategy"
+    };
+
+    if (missedLessons.size === 0) {
+      recommendationsHost.append(
+        createElement("li", "", "No lesson review is required based on this attempt. Try a more challenging set of questions.")
+      );
+    } else {
+      Array.from(missedLessons).sort().forEach(function (lessonNumber) {
+        const item = createElement(
+          "li",
+          "",
+          lessonDescriptions[lessonNumber]
+        );
+        recommendationsHost.append(item);
+      });
+
+      recommendationsHost.append(
+        createElement(
+          "li",
+          "",
+          "After reviewing these lessons, retry the Elite Challenge and aim for at least 80%."
+        )
+      );
+    }
+
+    resultPanel.hidden = false;
+    resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    renderResults();
+  });
+
+  resetButton.addEventListener("click", function () {
+    form.reset();
+    resultPanel.hidden = true;
+    scoreText.textContent = "";
+    messageText.textContent = "";
+    reviewHost.replaceChildren();
+    recommendationsHost.replaceChildren();
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  renderQuestions();
+})();
+</script>
+<!-- END QUADRATIC EQUATIONS: ELITE CHALLENGE -->
 <section class="section"><div class="container"><div class="kicker">FREQUENT QUESTIONS</div><h2>Quadratic Equations FAQ</h2><div class="faq"><strong>What makes an equation quadratic?</strong><p>Its highest power of the variable is 2, and it can be represented in the standard form ax² + bx + c = 0 with a ≠ 0.</p></div><div class="faq"><strong>Which method should I use to solve a quadratic equation?</strong><p>It depends on the structure of the equation. A strong learner should be able to recognise suitable methods and verify the resulting solutions.</p></div><div class="faq"><strong>Is completing the square useful beyond solving equations?</strong><p>Yes. It provides an important connection between quadratic equations, perfect squares, vertex form and graphical interpretation.</p></div><div class="faq"><strong>Can quadratic equations be used in examination preparation?</strong><p>Yes. The mathematical concepts can be developed through progressively challenging practice and then applied to the relevant requirements of an examination pathway.</p></div></div></section>
 <section class="section"><div class="container"><div class="cta"><div class="kicker">BUILD YOUR MASTERY</div><h2>Ready to go deeper into Quadratic Equations?</h2><p>Contact Mr Chinonso Mathematics Elite Academy for structured Mathematics learning, topic guidance and tutoring support.</p><div class="actions"><a class="btn primary" href="https://wa.me/2348063357348">Chat on WhatsApp</a><a class="btn secondary" href="waec-mathematics.html">WAEC Mathematics Hub</a></div></div></div></section>
 </main><footer><div class="container"><div class="footer-row"><div><strong>Mr Chinonso Mathematics Elite Academy</strong><p>Mathematics education from foundation to elite application.</p></div><div><a href="https://www.youtube.com/@WAECandIGCSEMATHSCOACH">YouTube</a> · <a href="https://wa.me/2348063357348">WhatsApp</a> · <a href="index.html">Academy Home</a></div></div><div class="copyright">© Mr Chinonso Mathematics Elite Academy. Educational alignment does not imply endorsement by any examination board.</div></div></footer>
