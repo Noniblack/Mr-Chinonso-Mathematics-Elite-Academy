@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quadratic Inequalities Mastery | Mr Chinonso Mathematics Elite Academy</title>
+  <meta name="description" content="Master quadratic inequalities with step-by-step lessons, sign analysis, worked examples, examination practice and an interactive self-assessment.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mrchinonsomathsacademy.com/quadratic-inequalities.html">
+  <meta property="og:title" content="Quadratic Inequalities Mastery">
+  <meta property="og:description" content="Learn to solve quadratic inequalities through factorisation, sign analysis and examination-style practice.">
+  <meta property="og:url" content="https://mrchinonsomathsacademy.com/quadratic-inequalities.html">
+  <meta property="og:type" content="article">
+
+  <style>
+    :root {
+      --navy: #102746;
+      --blue: #1769aa;
+      --light-blue: #eaf4ff;
+      --ink: #243247;
+      --muted: #5b6b7d;
+      --border: #d9e3ef;
+      --white: #ffffff;
+      --green: #137547;
+      --red: #a12a2a;
+      --soft-green: #e9f7ef;
+      --soft-red: #fff0f0;
+      --shadow: 0 8px 24px rgba(16, 39, 70, 0.07);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--ink);
+      background: #f5f8fc;
+    }
+
+    a { color: var(--blue); }
+
+    a:focus-visible, button:focus-visible, input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid #e9a23b;
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 20px;
+    }
+
+    .header-inner, main, .site-footer {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .brand {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .brand a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 12px;
+    }
+
+    .site-nav a { color: #dcecff; }
+
+    .hero {
+      background: linear-gradient(135deg, #102746, #1769aa);
+      color: var(--white);
+      padding: 48px 0;
+    }
+
+    .hero h1 {
+      margin: 8px 0 16px;
+      line-height: 1.2;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+
+    .hero p { max-width: 760px; }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .hero .eyebrow { color: #cce6ff; }
+
+    .hero-actions, .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 17px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid transparent;
+    }
+
+    .btn.primary {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .btn.secondary {
+      border-color: #cce6ff;
+      color: var(--white);
+    }
+
+    main { padding: 30px 0 50px; }
+
+    .section { margin: 26px 0; }
+
+    .section-heading { margin-bottom: 18px; }
+
+    .section-heading h2 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .section-heading p { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .card h3 { color: var(--navy); margin-top: 0; }
+
+    .number {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .math {
+      display: block;
+      background: var(--light-blue);
+      border-left: 4px solid var(--blue);
+      border-radius: 5px;
+      padding: 12px 15px;
+      margin: 12px 0;
+      overflow-wrap: anywhere;
+      font-weight: 600;
+    }
+
+    .note {
+      background: #fff8e7;
+      border-left: 4px solid #d89a18;
+      padding: 14px 16px;
+      border-radius: 5px;
+    }
+
+    .success-note {
+      background: var(--soft-green);
+      border-left: 4px solid var(--green);
+      padding: 14px 16px;
+      border-radius: 5px;
+    }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 14px 0;
+      background: var(--white);
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--light-blue);
+      color: var(--navy);
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 15px;
+      margin: 12px 0;
+      background: var(--white);
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .practice-list li { margin-bottom: 14px; }
+
+    .quiz-question {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .quiz-question legend {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 7px 0;
+      cursor: pointer;
+    }
+
+    .option input {
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .quiz-button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 12px 8px 0 0;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .quiz-button.reset { background: var(--navy); }
+
+    #quiz-results {
+      margin-top: 22px;
+      padding: 20px;
+      border-radius: 10px;
+      background: var(--light-blue);
+    }
+
+    #quiz-results[hidden] { display: none; }
+
+    .feedback-correct { color: var(--green); font-weight: 700; }
+    .feedback-wrong { color: var(--red); font-weight: 700; }
+
+    .review-item {
+      border-top: 1px solid var(--border);
+      padding: 12px 0;
+    }
+
+    .cta {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 14px;
+      padding: 26px;
+      margin-top: 30px;
+    }
+
+    .cta h2 { margin-top: 0; }
+    .cta a { color: #dcecff; }
+
+    .site-footer {
+      padding: 22px 0 32px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 34px 0; }
+      .card { padding: 17px; }
+      .site-nav { gap: 10px 14px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Quadratic Inequalities Mastery",
+    "description": "A structured mathematics lesson on solving quadratic inequalities using roots, sign analysis and examination practice.",
+    "learningResourceType": "Lesson",
+    "educationalLevel": "Secondary",
+    "inLanguage": "en",
+    "url": "https://mrchinonsomathsacademy.com/quadratic-inequalities.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Mr Chinonso Mathematics Elite Academy",
+      "url": "https://mrchinonsomathsacademy.com/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="brand">
+        <a href="index.html">Mr Chinonso Mathematics Elite Academy</a>
+      </p>
+      <p>Master Mathematics. Think like an Elite Mathematician.</p>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="waec-mathematics.html">WAEC Mathematics</a>
+        <a href="quadratic-equations.html">Quadratic Equations</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="waec-2026-2027-mathematics.html">WAEC 2026/2027 Hub</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="header-inner">
+      <p class="eyebrow">Elite Learning Pathway</p>
+      <h1>Quadratic Inequalities Mastery</h1>
+      <p>
+        Learn how to determine where a quadratic expression is positive,
+        negative, non-negative or non-positive. Build confidence through
+        factorisation, sign analysis, interval notation and examination-style practice.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#lesson-foundation">Start the Lesson</a>
+        <a class="btn secondary" href="#self-assessment">Take the Challenge</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="lesson-foundation">
+      <div class="section-heading">
+        <h2>Lesson 1: Understanding Quadratic Inequalities</h2>
+        <p>Start with the meaning of the symbols and the structure of a quadratic expression.</p>
+      </div>
+
+      <div class="card">
+        <h3>Learning objectives</h3>
+        <p>By the end of this lesson, you should be able to:</p>
+        <ul>
+          <li>Recognise and interpret quadratic inequalities.</li>
+          <li>Find the roots of the associated quadratic equation.</li>
+          <li>Use the roots to identify positive and negative intervals.</li>
+          <li>Distinguish strict inequalities from inclusive inequalities.</li>
+          <li>Present solutions correctly using inequalities and interval notation.</li>
+        </ul>
+
+        <h3>Know your inequality symbols</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Meaning</th><th>Are zero values included?</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>&gt;</td><td>Greater than zero</td><td>No</td></tr>
+              <tr><td>&lt;</td><td>Less than zero</td><td>No</td></tr>
+              <tr><td>≥</td><td>Greater than or equal to zero</td><td>Yes</td></tr>
+              <tr><td>≤</td><td>Less than or equal to zero</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>A quadratic inequality can be written in forms such as:</p>
+        <span class="math">ax² + bx + c &gt; 0</span>
+        <span class="math">ax² + bx + c ≤ 0</span>
+        <p>Here, <strong>a ≠ 0</strong>. The expression has degree two.</p>
+
+        <div class="note">
+          <strong>Important:</strong> Solving an equation finds values that make an expression equal to zero.
+          Solving an inequality finds all values that make it positive or negative as required.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sign-analysis">
+      <div class="section-heading">
+        <h2>Lesson 2: Roots and Sign Analysis</h2>
+        <p>The roots divide the number line into intervals. The sign of the quadratic expression tells us which intervals to select.</p>
+      </div>
+
+      <div class="card">
+        <h3>Case A: Two distinct real roots and a positive leading coefficient</h3>
+        <p>Suppose the expression is:</p>
+        <span class="math">f(x) = (x − 2)(x − 3)</span>
+        <p>The roots are x = 2 and x = 3. Test the intervals on either side of and between the roots.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Interval</th><th>Test value</th><th>Sign of f(x)</th></tr></thead>
+            <tbody>
+              <tr><td>x &lt; 2</td><td>x = 0</td><td>Positive</td></tr>
+              <tr><td>2 &lt; x &lt; 3</td><td>x = 2.5</td><td>Negative</td></tr>
+              <tr><td>x &gt; 3</td><td>x = 4</td><td>Positive</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Therefore, when the leading coefficient is positive and there are two distinct roots:</p>
+        <span class="math">Positive outside the roots; negative between the roots.</span>
+
+        <h3>Case B: Negative leading coefficient</h3>
+        <p>If the quadratic has two distinct roots but its leading coefficient is negative, the signs reverse:</p>
+        <span class="math">Negative outside the roots; positive between the roots.</span>
+
+        <h3>General sign rule</h3>
+        <p>For <strong>f(x) = a(x − r₁)(x − r₂)</strong>, where r₁ &lt; r₂:</p>
+        <ul>
+          <li>If a &gt; 0, f(x) is positive outside the roots and negative between them.</li>
+          <li>If a &lt; 0, f(x) is negative outside the roots and positive between them.</li>
+        </ul>
+
+        <div class="note">
+          If the quadratic has no real roots, its sign remains the same as the leading coefficient for every real x.
+          If it has a repeated real root, its sign is the same as the leading coefficient on both sides of that root,
+          except that the expression equals zero at the root.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="section-heading">
+        <h2>Lesson 3: A Reliable Method for Solving</h2>
+      </div>
+
+      <div class="card">
+        <ol>
+          <li><strong>Put the inequality in standard form.</strong> Move all terms to one side so that the other side is zero.</li>
+          <li><strong>Find the roots.</strong> Solve the associated quadratic equation by factorisation, completing the square or the quadratic formula.</li>
+          <li><strong>Arrange the roots.</strong> Place the smaller root before the larger root on a number line.</li>
+          <li><strong>Determine the sign.</strong> Use the leading coefficient and sign analysis, or test one value in each interval.</li>
+          <li><strong>Select the required interval or intervals.</strong> Choose where the expression satisfies the inequality.</li>
+          <li><strong>Check the endpoints.</strong> Include roots for ≥ or ≤; exclude roots for &gt; or &lt;.</li>
+          <li><strong>State the final answer clearly.</strong> Use inequality notation or interval notation.</li>
+        </ol>
+
+        <h3>Endpoint notation</h3>
+        <ul>
+          <li><strong>(a, b)</strong> excludes both endpoints.</li>
+          <li><strong>[a, b]</strong> includes both endpoints.</li>
+          <li><strong>[a, b)</strong> includes a but excludes b.</li>
+          <li><strong>(a, b]</strong> excludes a but includes b.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="worked-examples">
+      <div class="section-heading">
+        <h2>Lesson 4: Worked Examples</h2>
+        <p>Study the method and the reason each interval is selected.</p>
+      </div>
+
+      <div class="card">
+        <h3>Example 1: Solve x² − 5x + 6 &gt; 0</h3>
+        <p><strong>Step 1: Factorise.</strong></p>
+        <span class="math">(x − 2)(x − 3) &gt; 0</span>
+        <p><strong>Step 2:</strong> The roots are x = 2 and x = 3. The leading coefficient is positive, so the expression is positive outside the roots.</p>
+        <p><strong>Answer:</strong></p>
+        <span class="math">x &lt; 2 or x &gt; 3</span>
+        <p>In interval notation: <strong>(−∞, 2) ∪ (3, ∞)</strong>. The endpoints are excluded because the inequality is strict.</p>
+
+        <hr>
+
+        <h3>Example 2: Solve x² − 4x − 5 ≤ 0</h3>
+        <p><strong>Step 1: Factorise.</strong></p>
+        <span class="math">(x − 5)(x + 1) ≤ 0</span>
+        <p>The roots are x = −1 and x = 5. The leading coefficient is positive, so the expression is negative between the roots.</p>
+        <p>The inequality includes zero, so both roots are included.</p>
+        <span class="math">−1 ≤ x ≤ 5</span>
+        <p>In interval notation: <strong>[−1, 5]</strong>.</p>
+
+        <hr>
+
+        <h3>Example 3: Solve x² + 2x − 8 &lt; 0</h3>
+        <p><strong>Step 1: Factorise.</strong></p>
+        <span class="math">(x + 4)(x − 2) &lt; 0</span>
+        <p>The roots are x = −4 and x = 2. The leading coefficient is positive, so the expression is negative between the roots.</p>
+        <span class="math">−4 &lt; x &lt; 2</span>
+        <p>In interval notation: <strong>(−4, 2)</strong>.</p>
+
+        <hr>
+
+        <h3>Example 4: Solve −x² + 4x + 5 ≥ 0</h3>
+        <p><strong>Step 1: Find the roots.</strong></p>
+        <span class="math">−x² + 4x + 5 = 0</span>
+        <p>Multiply by −1 to obtain x² − 4x − 5 = 0. Factorising gives:</p>
+        <span class="math">(x − 5)(x + 1) = 0</span>
+        <p>The roots are x = −1 and x = 5. The original expression has a negative leading coefficient, so it is positive between the roots.</p>
+        <p>Because zero is included:</p>
+        <span class="math">−1 ≤ x ≤ 5</span>
+        <p>In interval notation: <strong>[−1, 5]</strong>.</p>
+        <div class="note">
+          Multiplying an inequality by a negative number reverses its inequality symbol.
+          In this example, we used multiplication by −1 only on the equation used to find the roots.
+          We then returned to the original inequality to determine the signs.
+        </div>
+
+        <hr>
+
+        <h3>Example 5: Solve 2x² − 8x + 6 &gt; 0</h3>
+        <p>Factorise:</p>
+        <span class="math">2(x² − 4x + 3) &gt; 0</span>
+        <span class="math">2(x − 1)(x − 3) &gt; 0</span>
+        <p>The roots are x = 1 and x = 3. The leading coefficient is positive, so the expression is positive outside the roots.</p>
+        <span class="math">x &lt; 1 or x &gt; 3</span>
+        <p>In interval notation: <strong>(−∞, 1) ∪ (3, ∞)</strong>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="practice">
+      <div class="section-heading">
+        <h2>Lesson 5: Guided Examination Practice</h2>
+        <p>Attempt each question before opening its worked solution.</p>
+      </div>
+
+      <div class="card">
+        <ol class="practice-list">
+          <li>
+            Solve x² − 9x + 20 &gt; 0.
+            <details>
+              <summary>Reveal worked solution</summary>
+              <p>Factorise: (x − 4)(x − 5) &gt; 0.</p>
+              <p>The leading coefficient is positive, so select the intervals outside the roots.</p>
+              <span class="math">x &lt; 4 or x &gt; 5</span>
+            </details>
+          </li>
+          <li>
+            Solve x² − 3x − 4 ≤ 0.
+            <details>
+              <summary>Reveal worked solution</summary>
+              <p>Factorise: (x − 4)(x + 1) ≤ 0.</p>
+              <p>The expression is non-positive between the roots. Include both endpoints.</p>
+              <span class="math">−1 ≤ x ≤ 4</span>
+            </details>
+          </li>
+          <li>
+            Solve x² − 11x + 30 &lt; 0.
+            <details>
+              <summary>Reveal worked solution</summary>
+              <p>Factorise: (x − 5)(x − 6) &lt; 0.</p>
+              <p>The expression is negative between the roots. The endpoints are excluded.</p>
+              <span class="math">5 &lt; x &lt; 6</span>
+            </details>
+          </li>
+          <li>
+            Solve −x² + 6x − 8 &gt; 0.
+            <details>
+              <summary>Reveal worked solution</summary>
+              <p>Factorise: −(x − 2)(x − 4) &gt; 0.</p>
+              <p>The leading coefficient is negative, so the expression is positive between the roots.</p>
+              <span class="math">2 &lt; x &lt; 4</span>
+            </details>
+          </li>
+          <li>
+            Solve x² − 6x + 9 ≥ 0.
+            <details>
+              <summary>Reveal worked solution</summary>
+              <p>Factorise: (x − 3)² ≥ 0.</p>
+              <p>A square is never negative for real x. It equals zero at x = 3 and is positive everywhere else.</p>
+              <span class="math">All real numbers: x ∈ ℝ</span>
+            </details>
+          </li>
+          <li>
+            Solve x² + 4x + 8 &gt; 0.
+            <details>
+              <summary>Reveal worked solution</summary>
+              <p>The discriminant is b² − 4ac = 16 − 32 = −16, so there are no real roots.</p>
+              <p>Since the leading coefficient is positive and there are no real roots, the quadratic is positive for every real x.</p>
+              <span class="math">All real numbers: x ∈ ℝ</span>
+            </details>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="self-assessment">
+      <div class="section-heading">
+        <h2>Elite Self-Assessment</h2>
+        <p>Answer all six questions. Each question carries one mark. Your score and explanations will appear after submission.</p>
+      </div>
+
+      <div class="card">
+        <form id="inequality-quiz">
+          <fieldset class="quiz-question" data-answer="b" data-explanation="Factorise to get (x − 2)(x − 3) &gt; 0. With a positive leading coefficient, the expression is positive outside the roots.">
+            <legend>1. Solve x² − 5x + 6 &gt; 0.</legend>
+            <label class="option"><input type="radio" name="q1" value="a"> 2 &lt; x &lt; 3</label>
+            <label class="option"><input type="radio" name="q1" value="b"> x &lt; 2 or x &gt; 3</label>
+            <label class="option"><input type="radio" name="q1" value="c"> x ≤ 2 or x ≥ 3</label>
+            <label class="option"><input type="radio" name="q1" value="d"> All real numbers</label>
+          </fieldset>
+
+          <fieldset class="quiz-question" data-answer="c" data-explanation="Factorise to get (x − 5)(x + 1) ≤ 0. The expression is non-positive between the roots, including both endpoints.">
+            <legend>2. Solve x² − 4x − 5 ≤ 0.</legend>
+            <label class="option"><input type="radio" name="q2" value="a"> x &lt; −1 or x &gt; 5</label>
+            <label class="option"><input type="radio" name="q2" value="b"> −1 &lt; x &lt; 5</label>
+            <label class="option"><input type="radio" name="q2" value="c"> −1 ≤ x ≤ 5</label>
+            <label class="option"><input type="radio" name="q2" value="d"> x ≤ −5 or x ≥ 1</label>
+          </fieldset>
+
+          <fieldset class="quiz-question" data-answer="a" data-explanation="The roots are −4 and 2. The leading coefficient is positive, so the quadratic is negative between the roots.">
+            <legend>3. Solve x² + 2x − 8 &lt; 0.</legend>
+            <label class="option"><input type="radio" name="q3" value="a"> −4 &lt; x &lt; 2</label>
+            <label class="option"><input type="radio" name="q3" value="b"> x &lt; −4 or x &gt; 2</label>
+            <label class="option"><input type="radio" name="q3" value="c"> −4 ≤ x ≤ 2</label>
+            <label class="option"><input type="radio" name="q3" value="d"> x &gt; 4</label>
+          </fieldset>
+
+          <fieldset class="quiz-question" data-answer="d" data-explanation="The roots are −1 and 5. The original quadratic has a negative leading coefficient, so it is positive between the roots. The inclusive symbol includes both roots.">
+            <legend>4. Solve −x² + 4x + 5 ≥ 0.</legend>
+            <label class="option"><input type="radio" name="q4" value="a"> x &lt; −1 or x &gt; 5</label>
+            <label class="option"><input type="radio" name="q4" value="b"> −1 &lt; x &lt; 5</label>
+            <label class="option"><input type="radio" name="q4" value="c"> x ≤ −1 or x ≥ 5</label>
+            <label class="option"><input type="radio" name="q4" value="d"> −1 ≤ x ≤ 5</label>
+          </fieldset>
+
+          <fieldset class="quiz-question" data-answer="b" data-explanation="The expression is (x − 3)². A square is always non-negative, so every real value of x satisfies the inequality.">
+            <legend>5. Solve x² − 6x + 9 ≥ 0.</legend>
+            <label class="option"><input type="radio" name="q5" value="a"> x = 3 only</label>
+            <label class="option"><input type="radio" name="q5" value="b"> All real numbers</label>
+            <label class="option"><input type="radio" name="q5" value="c"> x &gt; 3 only</label>
+            <label class="option"><input type="radio" name="q5" value="d"> No real solutions</label>
+          </fieldset>
+
+          <fieldset class="quiz-question" data-answer="c" data-explanation="The discriminant is 4² − 4(1)(8) = −16. There are no real roots, and the leading coefficient is positive, so the expression is always positive.">
+            <legend>6. Solve x² + 4x + 8 &gt; 0.</legend>
+            <label class="option"><input type="radio" name="q6" value="a"> −4 &lt; x &lt; 0</label>
+            <label class="option"><input type="radio" name="q6" value="b"> x ≤ −4 or x ≥ 0</label>
+            <label class="option"><input type="radio" name="q6" value="c"> All real numbers</label>
+            <label class="option"><input type="radio" name="q6" value="d"> No real solutions</label>
+          </fieldset>
+
+          <button class="quiz-button" type="submit">Mark My Answers</button>
+          <button class="quiz-button reset" type="reset">Try Again</button>
+        </form>
+
+        <section id="quiz-results" aria-live="polite" hidden>
+          <h3>Your Results</h3>
+          <p id="quiz-score"></p>
+          <p id="quiz-message"></p>
+          <div id="quiz-review"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Mastery Checklist</h2>
+        <p>Before moving on, confirm that you can:</p>
+        <ul>
+          <li>Find the roots of a quadratic expression.</li>
+          <li>Determine whether the expression is positive or negative in each interval.</li>
+          <li>Recognise when the leading coefficient reverses the sign pattern.</li>
+          <li>Include or exclude endpoints correctly.</li>
+          <li>Present a complete solution using interval or inequality notation.</li>
+        </ul>
+        <p class="success-note"><strong>Elite principle:</strong> Find the roots, analyse the signs, select the required intervals, and check the endpoints.</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Continue Your Mathematics Mastery Journey</h2>
+      <p>Strengthen your algebra foundations and prepare systematically for examinations.</p>
+      <div class="actions">
+        <a class="btn primary" href="quadratic-equations.html">Quadratic Equations</a>
+        <a class="btn secondary" href="waec-mathematics.html">WAEC Mathematics Hub</a>
+        <a class="btn secondary" href="waec-2026-2027-mathematics.html">WAEC 2026/2027 Preparation</a>
+      </div>
+      <p>For learning enquiries, contact the Academy via WhatsApp: <a href="https://wa.me/2348063357348">+234 806 335 7348</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="current-year">2026</span> Mr Chinonso Mathematics Elite Academy. Learn with structure. Practise with purpose.</p>
+    <p><a href="index.html">Academy Home</a> · <a href="quadratic-equations.html">Quadratic Equations</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var form = document.getElementById("inequality-quiz");
+      var results = document.getElementById("quiz-results");
+      var scoreOutput = document.getElementById("quiz-score");
+      var messageOutput = document.getElementById("quiz-message");
+      var review = document.getElementById("quiz-review");
+      var questions = Array.from(form.querySelectorAll(".quiz-question"));
+
+      document.getElementById("current-year").textContent =
+        String(new Date().getFullYear());
+
+      function makeElement(tag, className, text) {
+        var element = document.createElement(tag);
+        if (className) element.className = className;
+        if (text !== undefined) element.textContent = text;
+        return element;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var unanswered = questions.filter(function (question) {
+          return !question.querySelector('input[type="radio"]:checked');
+        });
+
+        if (unanswered.length > 0) {
+          results.hidden = false;
+          scoreOutput.textContent =
+            "Please answer all six questions. You have " +
+            unanswered.length + " unanswered.";
+          messageOutput.textContent =
+            "Complete the remaining questions, then submit again.";
+          review.replaceChildren();
+          results.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+
+        var score = 0;
+        review.replaceChildren();
+
+        questions.forEach(function (question, index) {
+          var chosen = question.querySelector('input[type="radio"]:checked');
+          var correct = chosen.value === question.dataset.answer;
+
+          if (correct) score += 1;
+
+          var item = makeElement("div", "review-item");
+          var heading = makeElement(
+            "p",
+            correct ? "feedback-correct" : "feedback-wrong",
+            "Question " + (index + 1) + ": " +
+              (correct ? "Correct" : "Not quite")
+          );
+          var explanation = makeElement(
+            "p",
+            "",
+            question.dataset.explanation
+          );
+
+          item.append(heading, explanation);
+          review.append(item);
+        });
+
+        var percentage = Math.round((score / questions.length) * 100);
+        scoreOutput.textContent =
+          "Score: " + score + " / " + questions.length +
+          " (" + percentage + "%).";
+
+        if (percentage === 100) {
+          messageOutput.textContent =
+            "Outstanding! You have demonstrated excellent control of quadratic inequalities.";
+        } else if (percentage >= 80) {
+          messageOutput.textContent =
+            "Excellent progress. Review any missed explanation to strengthen your mastery.";
+        } else if (percentage >= 50) {
+          messageOutput.textContent =
+            "Good effort. Revisit the sign-analysis lesson and worked examples before trying again.";
+        } else {
+          messageOutput.textContent =
+            "Keep learning. Study the roots, sign patterns and endpoint rules, then retake the assessment.";
+        }
+
+        results.hidden = false;
+        results.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      form.addEventListener("reset", function () {
+        results.hidden = true;
+        scoreOutput.textContent = "";
+        messageOutput.textContent = "";
+        review.replaceChildren();
+      });
+    })();
+  </script>
+</body>
+</html>
