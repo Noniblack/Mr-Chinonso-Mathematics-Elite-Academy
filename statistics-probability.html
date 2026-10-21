@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10233f">
+  <meta name="description" content="Master Statistics and Probability with step-by-step lessons on data, averages, variance, standard deviation, Spearman's rank correlation, permutations, combinations and probability for WAEC, NECO, JAMB and advanced mathematics.">
+  <meta name="robots" content="index, follow">
+  <title>Statistics and Probability Learning Hub | Mr Chinonso Mathematics Elite Academy</title>
+  <link rel="canonical" href="https://mrchinonsomathsacademy.com/statistics-probability.html">
+
+  <style>
+    :root {
+      --navy: #10233f;
+      --navy-light: #18385f;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --gold: #f2bd55;
+      --ink: #182638;
+      --muted: #596a7e;
+      --paper: #ffffff;
+      --background: #f3f6fa;
+      --line: #dce4ee;
+      --green: #167447;
+      --green-soft: #ecfdf3;
+      --amber-soft: #fff7e6;
+      --radius: 16px;
+      --shadow: 0 12px 32px rgba(16, 35, 63, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--background);
+      line-height: 1.7;
+    }
+
+    a { color: var(--blue); }
+    a:focus-visible, button:focus-visible, summary:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+      background: var(--navy);
+      box-shadow: 0 3px 16px rgba(0,0,0,.15);
+    }
+
+    .nav-row {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.25;
+      max-width: 260px;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--gold);
+      font-size: .76rem;
+      margin-top: 4px;
+      letter-spacing: .06em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: .91rem;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .hero {
+      color: white;
+      padding: 76px 0 68px;
+      background:
+        radial-gradient(circle at 90% 15%, rgba(242,189,85,.18), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--navy-light));
+    }
+
+    .eyebrow, .kicker {
+      color: #b7d2ff;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.1rem);
+      line-height: 1.1;
+      letter-spacing: -.035em;
+      max-width: 850px;
+      margin: 14px 0 20px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: #e1eaf7;
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 18px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: .96rem;
+    }
+
+    .button.secondary {
+      color: white;
+      background: transparent;
+      border: 1px solid #9cb5d5;
+    }
+
+    .button:hover { filter: brightness(.96); }
+
+    .section { padding: 58px 0; }
+    .section.alt { background: #eaf0f7; }
+
+    .section-heading {
+      max-width: 800px;
+      margin-bottom: 26px;
+    }
+
+    .section-heading .kicker { color: var(--blue); }
+    h2 {
+      color: var(--navy);
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      line-height: 1.2;
+      margin: 8px 0 12px;
+    }
+
+    h3 {
+      color: var(--navy);
+      line-height: 1.3;
+      margin-top: 0;
+    }
+
+    h4 { color: var(--navy); margin-bottom: 6px; }
+
+    .intro { color: var(--muted); font-size: 1.03rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .stage-number {
+      display: inline-block;
+      color: var(--blue);
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: .76rem;
+      font-weight: 800;
+      line-height: 1.5;
+      margin: 3px 4px 3px 0;
+    }
+
+    .tag.core { color: #14532d; background: #dcfce7; }
+    .tag.extension { color: #854d0e; background: #fef3c7; }
+    .tag.preuni { color: #3730a3; background: #e0e7ff; }
+
+    .notice {
+      padding: 17px 20px;
+      border-left: 5px solid var(--blue);
+      background: var(--blue-soft);
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .notice.warning {
+      background: var(--amber-soft);
+      border-left-color: #d97706;
+    }
+
+    .notice.success {
+      background: var(--green-soft);
+      border-left-color: var(--green);
+    }
+
+    .lesson {
+      margin: 22px 0;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(18px, 3vw, 30px);
+    }
+
+    .formula {
+      padding: 15px 18px;
+      margin: 14px 0;
+      background: #f0f5fc;
+      border: 1px solid #d6e3f5;
+      border-radius: 10px;
+      font-family: "Courier New", monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .worked {
+      border-left: 4px solid var(--green);
+      background: #f4fbf7;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .worked ol, .worked ul { margin-bottom: 0; }
+
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
+
+    table {
+      width: 100%;
+      min-width: 470px;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+    }
+
+    th { background: #e9f0fa; color: var(--navy); }
+
+    .topic-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .topic {
+      display: block;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .topic:hover {
+      border-color: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    .topic strong { display: block; color: var(--navy); }
+    .topic span { color: var(--muted); font-size: .92rem; }
+
+    details {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      padding: 16px 18px;
+      margin: 12px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    details .answer { margin-top: 14px; }
+
+    .quiz-question {
+      border: 1px solid var(--line);
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 16px 0;
+    }
+
+    .quiz-question legend {
+      font-weight: 800;
+      color: var(--navy);
+      padding: 0 4px;
+    }
+
+    .option {
+      display: block;
+      padding: 9px 10px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    .option:hover { background: #f0f5fc; }
+    .option input { margin-right: 8px; }
+
+    .feedback {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    .feedback.correct { color: var(--green); }
+    .feedback.incorrect { color: #b42318; }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: white;
+      border: 1px solid var(--line);
+      padding: 14px;
+      border-radius: 10px;
+    }
+
+    .check-item input { margin-top: 6px; accent-color: var(--blue); }
+
+    .progress-shell {
+      height: 10px;
+      background: #dce4ee;
+      border-radius: 99px;
+      overflow: hidden;
+      margin: 14px 0;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: var(--green);
+      transition: width .2s ease;
+    }
+
+    .cta {
+      color: white;
+      background: var(--navy);
+      border-radius: 20px;
+      padding: clamp(25px, 5vw, 50px);
+    }
+
+    .cta h2 { color: white; }
+    .cta p { color: #dce8f8; }
+
+    footer {
+      color: #dce8f8;
+      background: #0b192d;
+      padding: 28px 0;
+      font-size: .9rem;
+    }
+
+    footer a { color: #f5cf7e; }
+
+    .small { color: var(--muted); font-size: .9rem; }
+    .center { text-align: center; }
+
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav-row { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .nav-links { gap: 10px 14px; }
+    }
+
+    @media (max-width: 600px) {
+      .grid, .grid.two, .topic-list, .checklist {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding: 52px 0; }
+      .section { padding: 42px 0; }
+      .card { padding: 19px; }
+      .nav-links a { font-size: .85rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">
+        Mr Chinonso Mathematics Elite Academy
+        <span>MASTER MATHEMATICS. THINK LIKE AN ELITE MATHEMATICIAN.</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="waec-mathematics.html">WAEC Hub</a>
+        <a href="#learning-path">Learning Path</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#practice">Practice</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contact">Enquire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Statistics &amp; Probability Learning Hub</div>
+        <h1>Understand Data. Measure Uncertainty. Solve with Confidence.</h1>
+        <p>
+          Build a strong foundation in statistics and probability, master
+          examination-style questions, and progress to advanced applications
+          involving variance, standard deviation, Spearman's rank correlation,
+          permutations, combinations and conditional probability.
+        </p>
+        <p>
+          Designed for secondary-school learners preparing for WAEC, NECO and
+          JAMB, with clearly labelled extensions for other examination syllabuses
+          and pre-university study.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#learning-path">Start Learning</a>
+          <a class="button secondary" href="#practice">Try Practice Questions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">How to use this hub</div>
+          <h2>Learn in the right sequence</h2>
+          <p class="intro">
+            Study the foundational ideas first. Work through the examples,
+            attempt each practice question before opening its solution, and
+            use the quiz and mastery checklist to identify topics for revision.
+          </p>
+        </div>
+
+        <div class="notice">
+          <strong>Syllabus guidance:</strong> The labels below are a teaching
+          pathway, not a guarantee that every topic appears in every examination.
+          Requirements vary by examination board, year and course. Check the
+          current official syllabus and prescribed scope for your examination.
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="stage-number">Stage 1</span>
+            <h3>Foundational</h3>
+            <span class="tag core">Core secondary-school skills</span>
+            <p>Organise data, interpret charts, calculate averages and range, and solve elementary probability problems.</p>
+          </article>
+          <article class="card">
+            <span class="stage-number">Stage 2</span>
+            <h3>Examination Mastery</h3>
+            <span class="tag core">Syllabus-dependent depth</span>
+            <p>Handle grouped data, cumulative frequency, dispersion, correlation and multi-step examination questions.</p>
+          </article>
+          <article class="card">
+            <span class="stage-number">Stage 3</span>
+            <h3>Advanced Applications</h3>
+            <span class="tag extension">Extension / pre-university</span>
+            <p>Explore Spearman's rank correlation, counting methods, permutations, combinations and conditional probability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="learning-path">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Topic pathway</div>
+          <h2>Explore the learning areas</h2>
+          <p class="intro">Use this pathway to move from basic statistical language to more demanding mathematical reasoning.</p>
+        </div>
+
+        <div class="topic-list">
+          <a class="topic" href="#data">
+            <strong>1. Data and Frequency Tables</strong>
+            <span>Data types, collection, sampling, tallying and frequency distributions.</span>
+          </a>
+          <a class="topic" href="#charts">
+            <strong>2. Graphs and Data Representation</strong>
+            <span>Bar charts, pie charts, histograms, frequency polygons and ogives.</span>
+          </a>
+          <a class="topic" href="#averages">
+            <strong>3. Mean, Median and Mode</strong>
+            <span>Central tendency for raw and grouped data.</span>
+          </a>
+          <a class="topic" href="#dispersion">
+            <strong>4. Range, Variance and Standard Deviation</strong>
+            <span>Measure and interpret the spread of observations.</span>
+          </a>
+          <a class="topic" href="#correlation">
+            <strong>5. Correlation and Spearman's Rank</strong>
+            <span>Study relationships between paired observations and ranks.</span>
+          </a>
+          <a class="topic" href="#basic-probability">
+            <strong>6. Fundamental Probability</strong>
+            <span>Sample spaces, events, complements and probability rules.</span>
+          </a>
+          <a class="topic" href="#counting">
+            <strong>7. Permutations and Combinations</strong>
+            <span>Count arrangements and selections accurately.</span>
+          </a>
+          <a class="topic" href="#advanced-probability">
+            <strong>8. Advanced Probability</strong>
+            <span>Conditional probability, tree diagrams and multi-stage events.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lessons">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Guided lessons</div>
+          <h2>Foundational concepts and worked examples</h2>
+          <p class="intro">Read each explanation carefully and check the calculations yourself.</p>
+        </div>
+
+        <article class="lesson" id="data">
+          <span class="tag core">Foundational</span>
+          <h3>Lesson 1: Data, sampling and frequency distributions</h3>
+          <p><strong>Data</strong> are collected observations or measurements. Quantitative data are numerical; qualitative data describe categories. Discrete data are countable, while continuous data can take values within an interval.</p>
+          <p>Primary data are collected directly for a purpose. Secondary data have already been collected by another person or organisation. A sample is a subset of a population.</p>
+
+          <h4>Frequency tables</h4>
+          <p>A frequency tells us how often a value or class occurs. The total of all frequencies is the total number of observations.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Score (x)</th><th>Frequency (f)</th><th>fx</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>2</td><td>2</td></tr>
+                <tr><td>2</td><td>3</td><td>6</td></tr>
+                <tr><td>3</td><td>4</td><td>12</td></tr>
+                <tr><td>4</td><td>1</td><td>4</td></tr>
+                <tr><th>Total</th><th>10</th><th>24</th></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="worked">
+            <strong>Worked example</strong>
+            <p>The table contains 10 observations. The sum of the observations is 24 because the sum of fx is 24. Therefore, the mean is 24 ÷ 10 = <strong>2.4</strong>.</p>
+          </div>
+          <div class="notice">
+            <strong>Examination tip:</strong> Check that the frequencies add to the stated number of observations before calculating any statistic.
+          </div>
+        </article>
+
+        <article class="lesson" id="charts">
+          <span class="tag core">Foundational</span>
+          <h3>Lesson 2: Graphs and data representation</h3>
+          <ul>
+            <li><strong>Bar chart:</strong> compares categories, usually with separated bars.</li>
+            <li><strong>Pie chart:</strong> represents a whole as sectors of a circle.</li>
+            <li><strong>Histogram:</strong> represents continuous grouped data with adjacent bars. When class widths differ, use frequency density.</li>
+            <li><strong>Frequency polygon:</strong> joins plotted points at class midpoints.</li>
+            <li><strong>Cumulative frequency curve (ogive):</strong> plots cumulative frequency against class boundaries and helps estimate medians, quartiles and percentiles.</li>
+          </ul>
+          <div class="formula">Pie-chart angle = (category frequency ÷ total frequency) × 360°</div>
+          <div class="formula">Frequency density = frequency ÷ class width</div>
+          <div class="worked">
+            <strong>Worked example: pie chart</strong>
+            <p>In a group of 40 learners, 10 choose Biology as their favourite subject.</p>
+            <p>Sector angle = (10 ÷ 40) × 360° = 90°.</p>
+            <p>The Biology sector should measure <strong>90°</strong>.</p>
+          </div>
+          <div class="notice warning">
+            <strong>Common error:</strong> In a histogram with unequal class widths, bar height is frequency density, not raw frequency. Use the convention specified in the question.
+          </div>
+        </article>
+
+        <article class="lesson" id="averages">
+          <span class="tag core">Foundational</span>
+          <h3>Lesson 3: Mean, median, mode and range</h3>
+          <div class="formula">Mean = sum of observations ÷ number of observations</div>
+          <div class="formula">Mean from a frequency table = Σfx ÷ Σf</div>
+          <p><strong>Median</strong> is the middle value after arranging the data in order. For an even number of observations, average the two middle values.</p>
+          <p><strong>Mode</strong> is the most frequently occurring value. A data set may have more than one mode or no unique mode.</p>
+          <div class="formula">Range = maximum value − minimum value</div>
+          <div class="worked">
+            <strong>Worked example</strong>
+            <p>Find the mean, median, mode and range of 2, 4, 4, 6, 9.</p>
+            <ol>
+              <li>Mean = (2 + 4 + 4 + 6 + 9) ÷ 5 = 25 ÷ 5 = <strong>5</strong>.</li>
+              <li>Median = middle value = <strong>4</strong>.</li>
+              <li>Mode = most frequent value = <strong>4</strong>.</li>
+              <li>Range = 9 − 2 = <strong>7</strong>.</li>
+            </ol>
+          </div>
+          <h4>Grouped data</h4>
+          <p>For grouped data, use class midpoints as representative values when estimating the mean.</p>
+          <div class="formula">Estimated grouped mean = Σ(f × class midpoint) ÷ Σf</div>
+          <p>For grouped median or mode, use the appropriate grouped-data formula only when it is part of the prescribed syllabus. These results are generally estimates because the original observations are not known exactly.</p>
+        </article>
+
+        <article class="lesson" id="dispersion">
+          <span class="tag core">Core concept</span>
+          <span class="tag extension">Check syllabus depth</span>
+          <h3>Lesson 4: Variance and standard deviation</h3>
+          <p>Measures of dispersion describe how spread out the observations are. Two groups can have the same mean but different variability.</p>
+          <p><strong>Variance</strong> measures the average squared deviation from the mean. <strong>Standard deviation</strong> is the square root of the variance and is expressed in the same units as the original data.</p>
+          <div class="formula">Population variance: σ² = Σ(x − μ)² ÷ N</div>
+          <div class="formula">Population standard deviation: σ = √[Σ(x − μ)² ÷ N]</div>
+          <div class="formula">Shortcut for population variance: σ² = Σx² ÷ N − μ²</div>
+          <div class="notice warning">
+            These formulas use the population convention, dividing by N. Some courses also teach sample variance, which divides the sum of squared deviations by n − 1. Follow the definition required by the question.
+          </div>
+          <div class="worked">
+            <strong>Worked example</strong>
+            <p>Find the population variance and standard deviation of 2, 4, 6.</p>
+            <ol>
+              <li>Mean = (2 + 4 + 6) ÷ 3 = 4.</li>
+              <li>Deviations from the mean: −2, 0, 2.</li>
+              <li>Squared deviations: 4, 0, 4. Their sum is 8.</li>
+              <li>Variance = 8 ÷ 3 = <strong>8/3 ≈ 2.67</strong>.</li>
+              <li>Standard deviation = √(8/3) ≈ <strong>1.63</strong>.</li>
+            </ol>
+          </div>
+          <p>A smaller standard deviation generally indicates that observations lie closer to the mean. A larger standard deviation indicates greater spread, but comparisons should consider the units and scale of the data.</p>
+        </article>
+
+        <article class="lesson" id="correlation">
+          <span class="tag extension">Syllabus-dependent</span>
+          <span class="tag preuni">Advanced application</span>
+          <h3>Lesson 5: Correlation and Spearman's rank correlation</h3>
+          <p><strong>Correlation</strong> describes the direction and strength of an association between two variables. Positive association means that larger values of one variable tend to accompany larger values of the other; negative association means that larger values of one tend to accompany smaller values of the other.</p>
+          <p>A scatter diagram helps reveal the pattern. Correlation alone does not prove that one variable causes the other.</p>
+
+          <h4>Spearman's rank correlation coefficient</h4>
+          <p>Spearman's rank correlation assesses how closely two sets of ranks are associated. It is useful when data are ranked or when a monotonic relationship is being investigated.</p>
+          <div class="formula">For ranks without ties: rₛ = 1 − [6Σd² ÷ n(n² − 1)]</div>
+          <p>Here, d is the difference between the two ranks for each person or item, and n is the number of paired observations.</p>
+          <div class="worked">
+            <strong>Worked example: ranking two sets</strong>
+            <p>Suppose four learners have ranks in Mathematics and Science as follows:</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Learner</th><th>Math rank</th><th>Science rank</th><th>d</th><th>d²</th></tr></thead>
+                <tbody>
+                  <tr><td>A</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+                  <tr><td>B</td><td>2</td><td>3</td><td>−1</td><td>1</td></tr>
+                  <tr><td>C</td><td>3</td><td>2</td><td>1</td><td>1</td></tr>
+                  <tr><td>D</td><td>4</td><td>4</td><td>0</td><td>0</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Σd² = 2 and n = 4.</p>
+            <p>rₛ = 1 − [6(2) ÷ 4(4² − 1)] = 1 − 12/60 = <strong>0.8</strong>.</p>
+            <p>This indicates a strong positive rank association in this small example.</p>
+          </div>
+          <div class="notice warning">
+            The simple formula above assumes there are no tied ranks. When ties occur, assign average ranks and use the method prescribed by the relevant syllabus or course; do not apply the no-ties formula uncritically.
+          </div>
+          <p><strong>Pearson's product-moment correlation</strong> is a different measure, commonly used to describe linear association between numerical variables. Do not confuse it with Spearman's rank correlation.</p>
+        </article>
+
+        <article class="lesson" id="basic-probability">
+          <span class="tag core">Foundational</span>
+          <h3>Lesson 6: Fundamental probability</h3>
+          <p>A <strong>sample space</strong> is the set of all possible outcomes. An <strong>event</strong> is a collection of outcomes from that sample space.</p>
+          <div class="formula">For equally likely outcomes: P(A) = number of outcomes in A ÷ total number of outcomes</div>
+          <div class="formula">P(not A) = 1 − P(A)</div>
+          <div class="formula">P(A or B) = P(A) + P(B) − P(A and B)</div>
+          <div class="formula">If A and B are independent: P(A and B) = P(A) × P(B)</div>
+          <div class="worked">
+            <strong>Worked example: a fair die</strong>
+            <p>A fair six-sided die is rolled once. Find the probability of obtaining a number greater than 4.</p>
+            <p>Sample space = {1, 2, 3, 4, 5, 6}. Favourable outcomes = {5, 6}, so P(number greater than 4) = 2/6 = <strong>1/3</strong>.</p>
+          </div>
+          <div class="notice">
+            Mutually exclusive events cannot occur together in the same trial. Independent events are events for which the occurrence of one does not change the probability of the other. These terms are not interchangeable.
+          </div>
+        </article>
+
+        <article class="lesson" id="counting">
+          <span class="tag extension">Syllabus-dependent</span>
+          <span class="tag preuni">Advanced applications</span>
+          <h3>Lesson 7: Counting principles, permutations and combinations</h3>
+          <p>Counting methods help determine the number of possible arrangements or selections without listing every possibility.</p>
+          <div class="formula">n! = n × (n − 1) × ... × 2 × 1, with 0! = 1</div>
+          <p>A <strong>permutation</strong> is an arrangement in which order matters. A <strong>combination</strong> is a selection in which order does not matter.</p>
+          <div class="formula">Permutations: ⁿPᵣ = n! ÷ (n − r)!</div>
+          <div class="formula">Combinations: ⁿCᵣ = n! ÷ [r!(n − r)!]</div>
+          <div class="worked">
+            <strong>Worked example: selecting a team</strong>
+            <p>How many different groups of 3 learners can be selected from 5 learners?</p>
+            <p>Order does not matter, so use a combination.</p>
+            <p>⁵C₃ = 5! ÷ [3! × 2!] = (5 × 4) ÷ (2 × 1) = <strong>10 groups</strong>.</p>
+          </div>
+          <div class="worked">
+            <strong>Worked example: awarding positions</strong>
+            <p>In how many ways can first, second and third positions be awarded among 5 learners, with no ties?</p>
+            <p>Order matters, so use a permutation.</p>
+            <p>⁵P₃ = 5! ÷ 2! = 5 × 4 × 3 = <strong>60 arrangements</strong>.</p>
+          </div>
+          <h4>How to choose the method</h4>
+          <ul>
+            <li>Use permutations when changing the order creates a different outcome.</li>
+            <li>Use combinations when the same selected group counts only once, regardless of order.</li>
+            <li>Check for restrictions, repetition, identical objects or circular arrangements before applying a formula.</li>
+          </ul>
+        </article>
+
+        <article class="lesson" id="advanced-probability">
+          <span class="tag extension">Syllabus-dependent</span>
+          <span class="tag preuni">Advanced applications</span>
+          <h3>Lesson 8: Conditional probability and multi-stage events</h3>
+          <p>Conditional probability is the probability of event A occurring when it is known that event B has occurred.</p>
+          <div class="formula">P(A | B) = P(A and B) ÷ P(B), provided P(B) &gt; 0</div>
+          <p>Tree diagrams help organise multi-stage experiments. Multiply probabilities along a path, then add the probabilities of separate paths that satisfy the event being investigated.</p>
+          <div class="worked">
+            <strong>Worked example: drawing without replacement</strong>
+            <p>A bag contains 3 red balls and 2 blue balls. Two balls are drawn at random without replacement. Find the probability that both are red.</p>
+            <ol>
+              <li>Probability the first ball is red = 3/5.</li>
+              <li>After a red ball is drawn, 2 red balls remain among 4 balls. Probability the second is red = 2/4.</li>
+              <li>Probability both are red = (3/5) × (2/4) = <strong>3/10</strong>.</li>
+            </ol>
+          </div>
+          <h4>Connecting counting and probability</h4>
+          <p>When outcomes are equally likely, permutations or combinations can count favourable outcomes and total outcomes. Ensure that the favourable and total outcomes are counted using the same method.</p>
+          <div class="worked">
+            <strong>Worked example: combination-based probability</strong>
+            <p>A committee of 2 learners is selected at random from 5 learners, of whom 3 are girls and 2 are boys. Find the probability that both selected learners are girls.</p>
+            <ol>
+              <li>Total committees = ⁵C₂ = 10.</li>
+              <li>All-girl committees = ³C₂ = 3.</li>
+              <li>Probability = 3/10 = <strong>0.3</strong>.</li>
+            </ol>
+          </div>
+          <div class="notice warning">
+            Advanced probability, Spearman's rank correlation and formal permutation/combination techniques are extensions whose exact depth depends on the examination board and course. Learn them when required by your current syllabus or next academic pathway.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt" id="practice">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Guided practice</div>
+          <h2>Test your understanding</h2>
+          <p class="intro">Attempt each question before expanding the solution. Write out your steps as you would in an examination.</p>
+        </div>
+
+        <details>
+          <summary>Question 1 — Mean and median (Foundational)</summary>
+          <div class="answer">
+            <p>Find the mean and median of 3, 5, 5, 7, 10.</p>
+            <p><strong>Solution:</strong> Mean = (3 + 5 + 5 + 7 + 10) ÷ 5 = 30 ÷ 5 = 6. The middle value is 5, so the median is 5.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Question 2 — Pie charts (Foundational)</summary>
+          <div class="answer">
+            <p>There are 60 learners in a club. If 15 belong to the drama group, find the angle of the drama sector in a pie chart.</p>
+            <p><strong>Solution:</strong> (15 ÷ 60) × 360° = 90°.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Question 3 — Variance (Examination / syllabus-dependent)</summary>
+          <div class="answer">
+            <p>Find the population variance of 1, 3, 5.</p>
+            <p><strong>Solution:</strong> Mean = 3. Squared deviations are 4, 0 and 4. Population variance = (4 + 0 + 4) ÷ 3 = 8/3 ≈ 2.67.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Question 4 — Spearman's rank correlation (Advanced)</summary>
+          <div class="answer">
+            <p>For 5 paired observations with no tied ranks, Σd² = 4. Find Spearman's rank correlation coefficient.</p>
+            <p><strong>Solution:</strong> rₛ = 1 − [6(4) ÷ 5(5² − 1)] = 1 − 24/120 = 0.8.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Question 5 — Permutations or combinations? (Advanced)</summary>
+          <div class="answer">
+            <p>How many different ways can 2 representatives be selected from 6 learners?</p>
+            <p><strong>Solution:</strong> Order does not matter, so use a combination: ⁶C₂ = 6! ÷ (2!4!) = (6 × 5) ÷ 2 = 15.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Question 6 — Probability without replacement (Advanced)</summary>
+          <div class="answer">
+            <p>A bag contains 4 green balls and 3 yellow balls. Two balls are drawn without replacement. Find the probability that both are green.</p>
+            <p><strong>Solution:</strong> (4/7) × (3/6) = 12/42 = 2/7.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="quiz">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Self-assessment</div>
+          <h2>Statistics &amp; Probability mastery quiz</h2>
+          <p class="intro">Answer all six questions, submit your responses, and review the feedback. This quiz is for practice and does not record or transmit your results.</p>
+        </div>
+
+        <form id="statistics-quiz">
+          <fieldset class="quiz-question">
+            <legend>1. What is the mean of 2, 4, 6 and 8?</legend>
+            <label class="option"><input type="radio" name="q1" value="A" required> 4</label>
+            <label class="option"><input type="radio" name="q1" value="B"> 5</label>
+            <label class="option"><input type="radio" name="q1" value="C"> 6</label>
+            <label class="option"><input type="radio" name="q1" value="D"> 20</label>
+            <div class="feedback" id="feedback-q1" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>2. Which measure is the square root of the population variance?</legend>
+            <label class="option"><input type="radio" name="q2" value="A" required> Range</label>
+            <label class="option"><input type="radio" name="q2" value="B"> Median</label>
+            <label class="option"><input type="radio" name="q2" value="C"> Standard deviation</label>
+            <label class="option"><input type="radio" name="q2" value="D"> Mode</label>
+            <div class="feedback" id="feedback-q2" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>3. A fair die is rolled once. What is the probability of obtaining an even number?</legend>
+            <label class="option"><input type="radio" name="q3" value="A" required> 1/6</label>
+            <label class="option"><input type="radio" name="q3" value="B"> 1/3</label>
+            <label class="option"><input type="radio" name="q3" value="C"> 2/3</label>
+            <label class="option"><input type="radio" name="q3" value="D"> 1/2</label>
+            <div class="feedback" id="feedback-q3" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>4. Which method counts selections when order does not matter?</legend>
+            <label class="option"><input type="radio" name="q4" value="A" required> Permutation</label>
+            <label class="option"><input type="radio" name="q4" value="B"> Combination</label>
+            <label class="option"><input type="radio" name="q4" value="C"> Frequency density</label>
+            <label class="option"><input type="radio" name="q4" value="D"> Standard deviation</label>
+            <div class="feedback" id="feedback-q4" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>5. For paired observations without tied ranks, what does Spearman's rank correlation measure?</legend>
+            <label class="option"><input type="radio" name="q5" value="A" required> The sum of all observations</label>
+            <label class="option"><input type="radio" name="q5" value="B"> The spread of a single variable</label>
+            <label class="option"><input type="radio" name="q5" value="C"> The association between two sets of ranks</label>
+            <label class="option"><input type="radio" name="q5" value="D"> The most frequent observation</label>
+            <div class="feedback" id="feedback-q5" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="quiz-question">
+            <legend>6. A bag contains 3 red and 2 blue balls. Two balls are drawn without replacement. What is the probability that both are red?</legend>
+            <label class="option"><input type="radio" name="q6" value="A" required> 3/5</label>
+            <label class="option"><input type="radio" name="q6" value="B"> 1/2</label>
+            <label class="option"><input type="radio" name="q6" value="C"> 3/10</label>
+            <label class="option"><input type="radio" name="q6" value="D"> 1/5</label>
+            <div class="feedback" id="feedback-q6" aria-live="polite"></div>
+          </fieldset>
+
+          <button class="button" type="submit">Submit Answers</button>
+          <button class="button" type="button" id="reset-quiz">Try Again</button>
+          <div id="quiz-result" class="notice success" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section alt" id="mastery">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Personal progress</div>
+          <h2>My mastery checklist</h2>
+          <p class="intro">Tick each skill after you can explain it and solve questions independently. Your selections remain only for this page session and are not sent to a server.</p>
+        </div>
+
+        <div class="progress-shell" aria-label="Checklist progress">
+          <div class="progress-bar" id="mastery-progress"></div>
+        </div>
+        <p id="mastery-count" aria-live="polite">0 of 10 skills mastered.</p>
+
+        <div class="checklist" id="mastery-checklist">
+          <label class="check-item"><input type="checkbox"><span>I can construct and interpret a frequency table.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I can choose an appropriate chart and interpret it.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I can calculate mean, median, mode and range.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I understand variance and standard deviation.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I can calculate and interpret Spearman's rank correlation when required.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I can solve basic probability questions using sample spaces and events.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I can distinguish independent and mutually exclusive events.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I know when to use permutations and combinations.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I can solve conditional probability and without-replacement problems.</span></label>
+          <label class="check-item"><input type="checkbox"><span>I have checked which topics my examination syllabus requires.</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="next-resources">
+      <div class="container">
+        <div class="section-heading">
+          <div class="kicker">Continue learning</div>
+          <h2>Explore other Academy learning hubs</h2>
+          <p class="intro">Strengthen your Mathematics knowledge by connecting related topics.</p>
+        </div>
+
+        <div class="topic-list">
+          <a class="topic" href="waec-mathematics.html">
+            <strong>WAEC Mathematics Hub</strong>
+            <span>Explore the wider secondary-school Mathematics pathway.</span>
+          </a>
+          <a class="topic" href="waec-2026-2027-mathematics.html">
+            <strong>WAEC Mathematics 2026/2027</strong>
+            <span>Continue structured examination preparation.</span>
+          </a>
+          <a class="topic" href="plane-geometry.html">
+            <strong>Plane Geometry &amp; Mensuration</strong>
+            <span>Review shapes, geometrical reasoning and measurement.</span>
+          </a>
+          <a class="topic" href="trigonometry.html">
+            <strong>Trigonometry Learning Hub</strong>
+            <span>Study trigonometric ratios, rules and applications.</span>
+          </a>
+          <a class="topic" href="quadratic-equations.html">
+            <strong>Quadratic Equations</strong>
+            <span>Practise algebraic methods and equation solving.</span>
+          </a>
+          <a class="topic" href="number-base-system.html">
+            <strong>Number Base System</strong>
+            <span>Strengthen number representation and operations.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta">
+          <div class="kicker">Your next step</div>
+          <h2>Build confidence through structured practice.</h2>
+          <p>
+            Continue your preparation with Mr Chinonso Mathematics Elite Academy.
+            Ask about learning support, examination preparation and available
+            Mathematics learning resources.
+          </p>
+          <a class="button"
+             href="https://wa.me/2348063357348?text=Hello%20Mr%20Chinonso%20Mathematics%20Elite%20Academy.%20I%20would%20like%20to%20enquire%20about%20Statistics%20and%20Probability%20learning%20support."
+             target="_blank" rel="noopener noreferrer">
+            Enquire via WhatsApp
+          </a>
+          <p class="small">Email: <a href="mailto:mrchinonsomathsacademy@gmail.com">mrchinonsomathsacademy@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Mr Chinonso Mathematics Elite Academy</strong></p>
+      <p>Master Mathematics. Think like an Elite Mathematician.</p>
+      <p>© <span id="current-year"></span> Mr Chinonso Mathematics Elite Academy. All rights reserved.</p>
+      <p><a href="index.html">Academy Home</a> · <a href="waec-mathematics.html">WAEC Mathematics Hub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    "use strict";
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+
+    const quizAnswers = {
+      q1: {
+        answer: "B",
+        explanation: "The total is 20 and there are 4 values, so the mean is 20 ÷ 4 = 5."
+      },
+      q2: {
+        answer: "C",
+        explanation: "Standard deviation is the square root of variance."
+      },
+      q3: {
+        answer: "D",
+        explanation: "The even outcomes are 2, 4 and 6: 3 out of 6 outcomes gives 3/6 = 1/2."
+      },
+      q4: {
+        answer: "B",
+        explanation: "A combination counts selections where order does not matter."
+      },
+      q5: {
+        answer: "C",
+        explanation: "Spearman's rank correlation measures the association between two sets of ranks."
+      },
+      q6: {
+        answer: "C",
+        explanation: "The probability is (3/5) × (2/4) = 6/20 = 3/10."
+      }
+    };
+
+    const quizForm = document.getElementById("statistics-quiz");
+    const quizResult = document.getElementById("quiz-result");
+
+    quizForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!quizForm.reportValidity()) return;
+
+      let score = 0;
+      const total = Object.keys(quizAnswers).length;
+
+      Object.entries(quizAnswers).forEach(function ([questionId, data]) {
+        const selected = quizForm.querySelector(
+          'input[name="' + questionId + '"]:checked'
+        );
+        const feedback = document.getElementById("feedback-" + questionId);
+        const isCorrect = selected && selected.value === data.answer;
+
+        if (isCorrect) score += 1;
+
+        feedback.textContent =
+          (isCorrect ? "Correct. " : "Review this one. ") + data.explanation;
+        feedback.className = "feedback " +
+          (isCorrect ? "correct" : "incorrect");
+      });
+
+      quizResult.hidden = false;
+      quizResult.textContent =
+        "Your score: " + score + " out of " + total + ". " +
+        (score === total
+          ? "Excellent work! Review the advanced topics next."
+          : "Review the feedback above, revisit the relevant lesson, and try again.");
+      quizResult.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    document.getElementById("reset-quiz").addEventListener("click", function () {
+      quizForm.reset();
+
+      Object.keys(quizAnswers).forEach(function (questionId) {
+        const feedback = document.getElementById("feedback-" + questionId);
+        feedback.textContent = "";
+        feedback.className = "feedback";
+      });
+
+      quizResult.hidden = true;
+      quizResult.textContent = "";
+    });
+
+    const masteryCheckboxes = Array.from(
+      document.querySelectorAll("#mastery-checklist input[type='checkbox']")
+    );
+    const masteryProgress = document.getElementById("mastery-progress");
+    const masteryCount = document.getElementById("mastery-count");
+
+    function updateMasteryProgress() {
+      const completed = masteryCheckboxes.filter(function (item) {
+        return item.checked;
+      }).length;
+      const total = masteryCheckboxes.length;
+      const percentage = total ? (completed / total) * 100 : 0;
+
+      masteryProgress.style.width = percentage + "%";
+      masteryCount.textContent =
+        completed + " of " + total + " skills mastered (" +
+        Math.round(percentage) + "%).";
+    }
+
+    masteryCheckboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", updateMasteryProgress);
+    });
+
+    updateMasteryProgress();
+  </script>
+</body>
+</html>
