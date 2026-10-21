@@ -1,0 +1,883 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn WAEC Mathematics Trigonometry with clear explanations, trigonometric ratios, sine rule, cosine rule, bearings, elevation, depression, worked examples and interactive practice.">
+  <meta name="keywords" content="WAEC Mathematics, Trigonometry, sine rule, cosine rule, bearings, angles of elevation, angles of depression, trigonometric ratios, Mr Chinonso Mathematics Elite Academy">
+  <meta name="author" content="Mr Chinonso Mathematics Elite Academy">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mrchinonsomathsacademy.com/trigonometry.html">
+  <meta name="theme-color" content="#102b50">
+  <title>WAEC Mathematics Trigonometry Learning Hub | Mr Chinonso Mathematics Elite Academy</title>
+
+  <style>
+    :root {
+      --navy: #102b50;
+      --blue: #1769aa;
+      --gold: #f2b544;
+      --ink: #203047;
+      --muted: #607086;
+      --paper: #ffffff;
+      --soft: #f3f7fc;
+      --line: #dce5ef;
+      --green: #16794b;
+      --red: #b42318;
+      --radius: 16px;
+      --shadow: 0 8px 26px rgba(16, 43, 80, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.7;
+    }
+
+    a { color: var(--blue); }
+    a:focus-visible, button:focus-visible, summary:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: #fff;
+      padding: 17px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: .92rem;
+    }
+
+    .hero {
+      color: #fff;
+      padding: 68px 0 62px;
+      background: linear-gradient(135deg, #102b50, #1769aa);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .kicker {
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: .8rem;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 { line-height: 1.25; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.7rem); margin: 12px 0; }
+    h2 { color: var(--navy); font-size: clamp(1.55rem, 3vw, 2.15rem); }
+    h3 { color: var(--navy); }
+
+    .hero p { color: #edf5ff; font-size: 1.05rem; }
+    .hero h1 { color: #fff; }
+
+    .hero-panel {
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.09);
+    }
+
+    .hero-panel li { margin-bottom: 8px; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 9px;
+      padding: 12px 17px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .btn.primary { background: var(--gold); color: #192b42; }
+    .btn.secondary { border-color: #fff; color: #fff; background: transparent; }
+    .btn.blue { background: var(--blue); color: #fff; }
+    .btn.light { background: #eaf2fb; color: var(--navy); }
+
+    .section { padding: 48px 0; }
+    .section.alt { background: var(--soft); }
+    .intro { color: var(--muted); max-width: 780px; }
+    .section-heading { margin-bottom: 24px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .tag {
+      display: inline-block;
+      color: var(--blue);
+      background: #eaf2fb;
+      border-radius: 100px;
+      padding: 4px 10px;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    .formula {
+      display: block;
+      background: #edf4fc;
+      border-left: 4px solid var(--blue);
+      padding: 13px 16px;
+      margin: 14px 0;
+      border-radius: 5px;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .note {
+      padding: 16px 18px;
+      background: #fff8e8;
+      border-left: 4px solid var(--gold);
+      border-radius: 7px;
+      margin: 18px 0;
+    }
+
+    .steps li { margin-bottom: 8px; }
+
+    .diagram {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin: 18px 0;
+    }
+
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      margin: 18px 0;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border: 1px solid var(--line);
+    }
+
+    th { background: #eaf2fb; color: var(--navy); }
+
+    .question {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      margin: 16px 0;
+      background: #fff;
+    }
+
+    .question legend { font-weight: 800; padding: 0 5px; }
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      cursor: pointer;
+    }
+
+    .option input { margin-top: 6px; }
+    .feedback { margin-top: 10px; font-weight: 700; }
+    .correct { color: var(--green); }
+    .incorrect { color: var(--red); }
+
+    .score-panel {
+      padding: 18px;
+      margin-top: 20px;
+      background: #eaf2fb;
+      border-radius: 12px;
+    }
+
+    .checklist li { margin: 9px 0; }
+    .cta {
+      padding: 32px;
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .cta h2 { color: #fff; }
+    .cta p { color: #edf5ff; }
+    .cta a:not(.btn) { color: #ffda84; }
+
+    footer {
+      background: #0b1d35;
+      color: #e6eef8;
+      padding: 28px 0;
+      font-size: .92rem;
+    }
+
+    footer a { color: #ffda84; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+
+    @media (max-width: 780px) {
+      .hero-grid, .grid { grid-template-columns: 1fr; }
+      .hero { padding: 46px 0; }
+      .section { padding: 36px 0; }
+      .card { padding: 18px; }
+      .cta { padding: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Mr Chinonso Mathematics Elite Academy</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="waec-mathematics.html">WAEC Hub</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#worked-examples">Examples</a>
+        <a href="#practice">Practice</a>
+        <a href="#self-assessment">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="kicker">WAEC MATHEMATICS • LEARNING HUB</div>
+          <h1>Master Trigonometry</h1>
+          <p>
+            Understand angles, right-angled triangles, trigonometric ratios,
+            triangle rules, bearings and real-life applications through
+            structured lessons and examination-style practice.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#lessons">Start Learning</a>
+            <a class="btn secondary" href="#practice">Try Practice Questions</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="What you will learn">
+          <h2 style="color:#fff;margin-top:0">Your learning pathway</h2>
+          <ul>
+            <li>Build foundational understanding.</li>
+            <li>Learn and select the correct formulas.</li>
+            <li>Study worked examples step by step.</li>
+            <li>Practise examination-style questions.</li>
+            <li>Check your understanding with a quiz.</li>
+          </ul>
+          <p><strong>Study tip:</strong> Draw a clear diagram before choosing a trigonometric method.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">BEFORE YOU BEGIN</span>
+          <h2>Learning objectives</h2>
+          <p class="intro">By the end of this learning hub, you should be able to:</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Recognise the ratios</h3>
+            <p>Identify the opposite, adjacent and hypotenuse sides relative to a given angle.</p>
+          </article>
+          <article class="card">
+            <h3>Select a method</h3>
+            <p>Choose a trigonometric ratio, sine rule or cosine rule to solve a problem.</p>
+          </article>
+          <article class="card">
+            <h3>Apply mathematics</h3>
+            <p>Solve problems involving bearings, heights, distances and angles of elevation or depression.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="lessons">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">FOUNDATIONAL THEORY</span>
+          <h2>Lesson 1: Angles and right-angled triangles</h2>
+          <p class="intro">
+            Trigonometry studies relationships between angles and sides of triangles.
+            In a right-angled triangle, one angle is exactly 90°.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Angles</h3>
+            <p>Angles may be measured in degrees. A full turn is 360°, a straight angle is 180°, and a right angle is 90°.</p>
+            <span class="formula">Angles in a triangle add up to 180°.</span>
+          </article>
+          <article class="card">
+            <h3>Identify the sides</h3>
+            <p><strong>Hypotenuse:</strong> opposite the right angle and the longest side.</p>
+            <p><strong>Opposite:</strong> across from the chosen angle.</p>
+            <p><strong>Adjacent:</strong> next to the chosen angle, but not the hypotenuse.</p>
+          </article>
+          <article class="card">
+            <h3>Pythagoras' theorem</h3>
+            <p>For a right-angled triangle with perpendicular sides \(a,b\) and hypotenuse \(c\):</p>
+            <span class="formula">a² + b² = c²</span>
+            <p>Use this relationship only for right-angled triangles.</p>
+          </article>
+        </div>
+
+        <svg class="diagram" viewBox="0 0 600 310" role="img" aria-labelledby="triangle-title triangle-desc">
+          <title id="triangle-title">Right-angled triangle and trigonometric sides</title>
+          <desc id="triangle-desc">A right triangle with angle theta at the lower left, opposite side vertical, adjacent side horizontal and hypotenuse sloping upwards.</desc>
+          <path d="M95 245 L455 245 L455 65 Z" fill="#eaf2fb" stroke="#1769aa" stroke-width="4"/>
+          <path d="M430 245 L430 220 L455 220" fill="none" stroke="#102b50" stroke-width="3"/>
+          <path d="M150 245 A55 55 0 0 0 144 218" fill="none" stroke="#d28a00" stroke-width="4"/>
+          <text x="115" y="225" font-size="22" fill="#102b50">θ</text>
+          <text x="255" y="278" font-size="20" fill="#102b50">Adjacent</text>
+          <text x="465" y="160" font-size="18" fill="#102b50">Opposite</text>
+          <text x="235" y="130" font-size="20" fill="#102b50" transform="rotate(-27 235 130)">Hypotenuse</text>
+          <text x="465" y="270" font-size="15" fill="#102b50">90°</text>
+        </svg>
+
+        <div class="note">
+          <strong>Important:</strong> Opposite and adjacent depend on which acute angle you choose.
+          The hypotenuse does not change.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ratios">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">CORE FORMULAS</span>
+          <h2>Lesson 2: The three trigonometric ratios</h2>
+          <p class="intro">For an acute angle θ in a right-angled triangle, remember SOH–CAH–TOA.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Sine — SOH</h3>
+            <span class="formula">sin θ = Opposite / Hypotenuse</span>
+            <p>Use sine when the opposite side and hypotenuse are involved.</p>
+          </article>
+          <article class="card">
+            <h3>Cosine — CAH</h3>
+            <span class="formula">cos θ = Adjacent / Hypotenuse</span>
+            <p>Use cosine when the adjacent side and hypotenuse are involved.</p>
+          </article>
+          <article class="card">
+            <h3>Tangent — TOA</h3>
+            <span class="formula">tan θ = Opposite / Adjacent</span>
+            <p>Use tangent when the opposite and adjacent sides are involved.</p>
+          </article>
+        </div>
+
+        <h3>Useful special-angle values</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Angle</th><th>sin θ</th><th>cos θ</th><th>tan θ</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>30°</td><td>1/2</td><td>√3/2</td><td>1/√3</td></tr>
+              <tr><td>45°</td><td>1/√2</td><td>1/√2</td><td>1</td></tr>
+              <tr><td>60°</td><td>√3/2</td><td>1/2</td><td>√3</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <strong>Calculator check:</strong> Set your calculator to degree mode when the question gives angles in degrees.
+          Round only as instructed by the question, usually to a stated number of decimal places or significant figures.
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="triangle-rules">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">NON-RIGHT-ANGLED TRIANGLES</span>
+          <h2>Lesson 3: Sine rule and cosine rule</h2>
+          <p class="intro">
+            These rules can be used for triangles that are not right-angled.
+            Match each side with the angle directly opposite it.
+          </p>
+        </div>
+
+        <article class="card">
+          <h3>The sine rule</h3>
+          <span class="formula">a / sin A = b / sin B = c / sin C</span>
+          <p>Use it when you know an opposite side-angle pair and another side or angle needed to form a proportion.</p>
+          <p><strong>Example:</strong> In a triangle, A = 30°, B = 60° and side a = 8 cm. Find side b.</p>
+          <ol class="steps">
+            <li>Write the sine rule: b / sin 60° = 8 / sin 30°.</li>
+            <li>Rearrange: b = 8 × sin 60° / sin 30°.</li>
+            <li>Substitute: b = 8 × 0.8660 / 0.5.</li>
+            <li><strong>Answer:</strong> b ≈ 13.86 cm.</li>
+          </ol>
+        </article>
+
+        <article class="card" style="margin-top:18px">
+          <h3>The cosine rule</h3>
+          <span class="formula">c² = a² + b² − 2ab cos C</span>
+          <p>Here, angle C is between sides a and b, and side c is opposite angle C.</p>
+          <p><strong>Example:</strong> Two sides of a triangle are 5 cm and 7 cm, and their included angle is 60°. Find the third side c.</p>
+          <ol class="steps">
+            <li>Substitute into the cosine rule: c² = 5² + 7² − 2(5)(7)cos 60°.</li>
+            <li>Since cos 60° = 0.5, c² = 25 + 49 − 35 = 39.</li>
+            <li>Take the positive square root: c = √39.</li>
+            <li><strong>Answer:</strong> c ≈ 6.24 cm.</li>
+          </ol>
+        </article>
+
+        <div class="note">
+          <strong>Choosing between the rules:</strong> the sine rule uses known opposite side-angle pairs.
+          The cosine rule is especially useful when two sides and their included angle are known, or when all three sides are known and an angle is required.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bearings">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">REAL-LIFE APPLICATIONS</span>
+          <h2>Lesson 4: Bearings, elevation and depression</h2>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Bearings</h3>
+            <p>A three-figure bearing is measured clockwise from north. For example, 065° is written with three figures.</p>
+            <p>Draw a north line at the starting point and measure the direction clockwise from it.</p>
+          </article>
+          <article class="card">
+            <h3>Angle of elevation</h3>
+            <p>The angle between the horizontal line through an observer and the line of sight to an object above that horizontal.</p>
+            <p>Common examples include viewing the top of a building or a tree.</p>
+          </article>
+          <article class="card">
+            <h3>Angle of depression</h3>
+            <p>The angle between the horizontal line through an observer and the line of sight to an object below that horizontal.</p>
+            <p>Draw the horizontal carefully before identifying the angle.</p>
+          </article>
+        </div>
+
+        <svg class="diagram" viewBox="0 0 600 300" role="img" aria-labelledby="bearing-title bearing-desc">
+          <title id="bearing-title">Illustration of a three-figure bearing</title>
+          <desc id="bearing-desc">A point O with a north arrow vertically upwards and a direction ray clockwise from north labelled bearing.</desc>
+          <circle cx="180" cy="220" r="5" fill="#102b50"/>
+          <path d="M180 220 L180 45" stroke="#102b50" stroke-width="3"/>
+          <path d="M180 45 L172 60 M180 45 L188 60" stroke="#102b50" stroke-width="3" fill="none"/>
+          <path d="M180 220 L355 120" stroke="#1769aa" stroke-width="4"/>
+          <path d="M180 165 A55 55 0 0 1 228 193" stroke="#d28a00" stroke-width="4" fill="none"/>
+          <text x="195" y="45" font-size="20" fill="#102b50">N</text>
+          <text x="160" y="247" font-size="20" fill="#102b50">O</text>
+          <text x="235" y="170" font-size="18" fill="#102b50">Bearing</text>
+          <text x="365" y="118" font-size="18" fill="#102b50">Direction</text>
+          <text x="40" y="280" font-size="14" fill="#607086">Illustrative diagram — not to scale.</text>
+        </svg>
+
+        <h3>Worked example: Angle of elevation</h3>
+        <p>
+          A student stands 20 m from the foot of a vertical tower. The angle of elevation to the top is 35°.
+          Find the height of the tower, assuming level ground and ignoring the student's eye height.
+        </p>
+        <ol class="steps">
+          <li>Identify the opposite side as the tower height h and the adjacent side as 20 m.</li>
+          <li>Use tangent: tan 35° = h / 20.</li>
+          <li>Rearrange: h = 20 tan 35°.</li>
+          <li><strong>Answer:</strong> h ≈ 14.00 m.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt" id="identities">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">IMPORTANT RELATIONSHIPS</span>
+          <h2>Lesson 5: Trigonometric identities</h2>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Pythagorean identity</h3>
+            <span class="formula">sin² θ + cos² θ = 1</span>
+            <p>This identity holds for all angles where the trigonometric functions are defined.</p>
+          </article>
+          <article class="card">
+            <h3>Tangent identity</h3>
+            <span class="formula">tan θ = sin θ / cos θ</span>
+            <p>Use this where cos θ ≠ 0.</p>
+          </article>
+          <article class="card">
+            <h3>Complementary angles</h3>
+            <span class="formula">sin(90° − θ) = cos θ</span>
+            <p>For an acute angle, the sine of its complement equals the cosine of the angle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="worked-examples">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">STEP-BY-STEP SOLUTIONS</span>
+          <h2>Worked examples</h2>
+        </div>
+
+        <article class="card">
+          <h3>Example 1: Find an unknown side</h3>
+          <p>A right-angled triangle has an angle of 30° and a hypotenuse of 12 cm. Find the side opposite the 30° angle.</p>
+          <ol class="steps">
+            <li>We know the opposite side and hypotenuse are involved, so use sine.</li>
+            <li>sin 30° = opposite / 12.</li>
+            <li>Opposite = 12 × sin 30° = 12 × 0.5.</li>
+            <li><strong>Answer: 6 cm.</strong></li>
+          </ol>
+        </article>
+
+        <article class="card" style="margin-top:18px">
+          <h3>Example 2: Find an angle</h3>
+          <p>In a right-angled triangle, the opposite side to angle θ is 6 cm and the adjacent side is 8 cm. Find θ to one decimal place.</p>
+          <ol class="steps">
+            <li>Use tangent because the opposite and adjacent sides are known.</li>
+            <li>tan θ = 6 / 8 = 0.75.</li>
+            <li>θ = tan⁻¹(0.75).</li>
+            <li><strong>Answer: θ ≈ 36.9°.</strong></li>
+          </ol>
+        </article>
+
+        <article class="card" style="margin-top:18px">
+          <h3>Example 3: Find the hypotenuse</h3>
+          <p>A right-angled triangle has perpendicular sides of 9 cm and 12 cm. Find its hypotenuse.</p>
+          <ol class="steps">
+            <li>Apply Pythagoras' theorem: c² = 9² + 12².</li>
+            <li>c² = 81 + 144 = 225.</li>
+            <li>c = √225.</li>
+            <li><strong>Answer: 15 cm.</strong></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt" id="practice">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">YOUR TURN</span>
+          <h2>Guided examination practice</h2>
+          <p class="intro">Attempt each question first. Open the solution only after you have tried it.</p>
+        </div>
+
+        <details class="card">
+          <summary><strong>Question 1 — Right-angled triangle</strong></summary>
+          <p>A right-angled triangle has an angle of 40° and an adjacent side of 10 cm. Find the hypotenuse to 2 decimal places.</p>
+          <p><strong>Solution:</strong> cos 40° = 10 / h, so h = 10 / cos 40° ≈ <strong>13.05 cm</strong>.</p>
+        </details>
+
+        <details class="card" style="margin-top:14px">
+          <summary><strong>Question 2 — Angle of elevation</strong></summary>
+          <p>A point on level ground is 15 m from a building. The angle of elevation to its top is 28°. Estimate the building's height.</p>
+          <p><strong>Solution:</strong> tan 28° = h / 15, so h = 15 tan 28° ≈ <strong>7.98 m</strong>.</p>
+        </details>
+
+        <details class="card" style="margin-top:14px">
+          <summary><strong>Question 3 — Sine rule</strong></summary>
+          <p>In triangle ABC, A = 30°, B = 45° and side a = 10 cm. Find side b to 2 decimal places.</p>
+          <p><strong>Solution:</strong> b / sin 45° = 10 / sin 30°, so b = 10 sin 45° / sin 30° ≈ <strong>14.14 cm</strong>.</p>
+        </details>
+
+        <details class="card" style="margin-top:14px">
+          <summary><strong>Question 4 — Cosine rule</strong></summary>
+          <p>Two sides of a triangle are 6 cm and 8 cm. The included angle is 60°. Find the third side to 2 decimal places.</p>
+          <p><strong>Solution:</strong> c² = 6² + 8² − 2(6)(8)cos 60° = 52. Thus c = √52 ≈ <strong>7.21 cm</strong>.</p>
+        </details>
+
+        <details class="card" style="margin-top:14px">
+          <summary><strong>Question 5 — Bearings</strong></summary>
+          <p>A point B is due east of point A. State the three-figure bearing of B from A.</p>
+          <p><strong>Solution:</strong> Bearings are measured clockwise from north. Due east is <strong>090°</strong>.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="self-assessment">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">CHECK YOUR UNDERSTANDING</span>
+          <h2>Trigonometry self-assessment</h2>
+          <p class="intro">Answer all six questions, then select Check My Answers. Each question includes feedback.</p>
+        </div>
+
+        <form id="trigonometry-quiz">
+          <fieldset class="question">
+            <legend>1. Which ratio equals opposite divided by hypotenuse?</legend>
+            <label class="option"><input type="radio" name="q1" value="A" required> A. Cosine</label>
+            <label class="option"><input type="radio" name="q1" value="B"> B. Sine</label>
+            <label class="option"><input type="radio" name="q1" value="C"> C. Tangent</label>
+            <label class="option"><input type="radio" name="q1" value="D"> D. Pythagoras</label>
+            <div class="feedback" id="feedback-q1" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="question">
+            <legend>2. A right triangle has perpendicular sides 5 cm and 12 cm. What is its hypotenuse?</legend>
+            <label class="option"><input type="radio" name="q2" value="A" required> A. 13 cm</label>
+            <label class="option"><input type="radio" name="q2" value="B"> B. 15 cm</label>
+            <label class="option"><input type="radio" name="q2" value="C"> C. 17 cm</label>
+            <label class="option"><input type="radio" name="q2" value="D"> D. 60 cm</label>
+            <div class="feedback" id="feedback-q2" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="question">
+            <legend>3. Which formula is the cosine rule for side c opposite angle C?</legend>
+            <label class="option"><input type="radio" name="q3" value="A" required> A. c = a + b</label>
+            <label class="option"><input type="radio" name="q3" value="B"> B. c² = a² + b² + 2ab cos C</label>
+            <label class="option"><input type="radio" name="q3" value="C"> C. c² = a² + b² − 2ab cos C</label>
+            <label class="option"><input type="radio" name="q3" value="D"> D. c / sin C = a / sin B</label>
+            <div class="feedback" id="feedback-q3" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="question">
+            <legend>4. Bearings are normally measured in which direction from north?</legend>
+            <label class="option"><input type="radio" name="q4" value="A" required> A. Anticlockwise</label>
+            <label class="option"><input type="radio" name="q4" value="B"> B. Vertically downward</label>
+            <label class="option"><input type="radio" name="q4" value="C"> C. From east only</label>
+            <label class="option"><input type="radio" name="q4" value="D"> D. Clockwise</label>
+            <div class="feedback" id="feedback-q4" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="question">
+            <legend>5. A tower's height is h and the horizontal distance is d. Which ratio relates h and d to the angle of elevation θ?</legend>
+            <label class="option"><input type="radio" name="q5" value="A" required> A. sin θ = h / d</label>
+            <label class="option"><input type="radio" name="q5" value="B"> B. tan θ = h / d</label>
+            <label class="option"><input type="radio" name="q5" value="C"> C. cos θ = h / d</label>
+            <label class="option"><input type="radio" name="q5" value="D"> D. tan θ = d / h</label>
+            <div class="feedback" id="feedback-q5" aria-live="polite"></div>
+          </fieldset>
+
+          <fieldset class="question">
+            <legend>6. Which identity is correct?</legend>
+            <label class="option"><input type="radio" name="q6" value="A" required> A. sin θ + cos θ = 1</label>
+            <label class="option"><input type="radio" name="q6" value="B"> B. sin² θ − cos² θ = 1</label>
+            <label class="option"><input type="radio" name="q6" value="C"> C. sin² θ + cos² θ = 1</label>
+            <label class="option"><input type="radio" name="q6" value="D"> D. tan θ = cos θ / sin θ</label>
+            <div class="feedback" id="feedback-q6" aria-live="polite"></div>
+          </fieldset>
+
+          <div class="actions">
+            <button class="btn blue" type="submit">Check My Answers</button>
+            <button class="btn light" type="reset">Try Again</button>
+          </div>
+          <div class="score-panel" id="quiz-result" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section alt" id="mastery-checklist">
+      <div class="container">
+        <h2>My trigonometry mastery checklist</h2>
+        <p class="intro">Use this checklist to decide what to revise next.</p>
+        <ul class="checklist">
+          <li><label><input type="checkbox"> I can identify opposite, adjacent and hypotenuse.</label></li>
+          <li><label><input type="checkbox"> I can select sine, cosine or tangent correctly.</label></li>
+          <li><label><input type="checkbox"> I can use the sine rule and cosine rule.</label></li>
+          <li><label><input type="checkbox"> I understand bearings and three-figure notation.</label></li>
+          <li><label><input type="checkbox"> I can solve elevation and depression problems.</label></li>
+          <li><label><input type="checkbox"> I can explain the key trigonometric identities.</label></li>
+          <li><label><input type="checkbox"> I have attempted the practice questions and quiz.</label></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>Continue Your Mathematics Mastery Journey</h2>
+          <p>
+            Build on your trigonometry skills with the Academy's wider
+            Mathematics learning resources and structured WAEC preparation.
+            Always confirm topic coverage against the official syllabus for your examination cycle.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="waec-mathematics.html">Return to WAEC Mathematics Hub</a>
+            <a class="btn secondary" href="waec-2026-2027-mathematics.html">WAEC 2026/2027 Preparation</a>
+            <a class="btn secondary" href="plane-geometry.html">Explore Plane Geometry</a>
+            <a class="btn secondary" href="quadratic-equations.html">Study Quadratic Equations</a>
+          </div>
+          <p>
+            Need guidance? Contact Mr Chinonso Mathematics Elite Academy on
+            WhatsApp: <a href="https://wa.me/2348063357348">+234 806 335 7348</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Mr Chinonso Mathematics Elite Academy</strong></p>
+      <div class="footer-links">
+        <a href="index.html">Academy Home</a>
+        <a href="waec-mathematics.html">WAEC Mathematics Hub</a>
+        <a href="waec-2026-2027-mathematics.html">WAEC 2026/2027 Preparation</a>
+        <a href="https://wa.me/2348063357348">WhatsApp Enquiries</a>
+      </div>
+      <p>Learn with structure. Practise with purpose. Think like an Elite Mathematician.</p>
+      <p>© <span id="current-year">2026</span> Mr Chinonso Mathematics Elite Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const quiz = document.getElementById("trigonometry-quiz");
+      const result = document.getElementById("quiz-result");
+      const currentYear = document.getElementById("current-year");
+
+      currentYear.textContent = new Date().getFullYear();
+
+      const answers = {
+        q1: {
+          correct: "B",
+          explanation: "Sine is opposite divided by hypotenuse (SOH)."
+        },
+        q2: {
+          correct: "A",
+          explanation: "By Pythagoras, c² = 5² + 12² = 25 + 144 = 169, so c = 13 cm."
+        },
+        q3: {
+          correct: "C",
+          explanation: "The cosine rule is c² = a² + b² − 2ab cos C."
+        },
+        q4: {
+          correct: "D",
+          explanation: "A bearing is measured clockwise from north and written using three figures."
+        },
+        q5: {
+          correct: "B",
+          explanation: "Tangent equals opposite divided by adjacent, so tan θ = h / d."
+        },
+        q6: {
+          correct: "C",
+          explanation: "The Pythagorean trigonometric identity is sin² θ + cos² θ = 1."
+        }
+      };
+
+      quiz.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let score = 0;
+
+        Object.keys(answers).forEach(function (key) {
+          const selected = quiz.querySelector('input[name="' + key + '"]:checked');
+          const feedback = document.getElementById("feedback-" + key);
+          const item = answers[key];
+
+          feedback.className = "feedback";
+
+          if (selected && selected.value === item.correct) {
+            score += 1;
+            feedback.textContent = "Correct. " + item.explanation;
+            feedback.classList.add("correct");
+          } else {
+            feedback.textContent = "Not quite. Correct answer: " +
+              item.correct + ". " + item.explanation;
+            feedback.classList.add("incorrect");
+          }
+        });
+
+        result.hidden = false;
+        result.textContent = "Your score: " + score + " out of 6 (" +
+          Math.round((score / 6) * 100) + "%). " +
+          (score === 6
+            ? "Excellent work! Review the worked examples and try the practice questions for further mastery."
+            : "Review the feedback above, revisit the relevant lessons, and try again.");
+        result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+
+      quiz.addEventListener("reset", function () {
+        window.setTimeout(function () {
+          Object.keys(answers).forEach(function (key) {
+            const feedback = document.getElementById("feedback-" + key);
+            feedback.textContent = "";
+            feedback.className = "feedback";
+          });
+          result.hidden = true;
+          result.textContent = "";
+        }, 0);
+      });
+    }());
+  </script>
+</body>
+</html>
