@@ -1,0 +1,1832 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10284a">
+  <meta name="robots" content="index, follow">
+
+  <title>Graphs and Functions Learning Hub | Mr Chinonso Mathematics Elite Academy</title>
+
+  <meta name="description" content="Master Cartesian coordinates, linear and quadratic graphs, gradients, transformations, sine, cosine and tangent graphs with worked examples, examination practice and interactive quizzes.">
+
+  <link rel="canonical" href="https://mrchinonsomathsacademy.com/graphs-functions.html">
+
+  <style>
+    :root {
+      --navy: #10284a;
+      --blue: #1769aa;
+      --blue-light: #eaf3fc;
+      --gold: #f3bd4f;
+      --ink: #243247;
+      --muted: #607086;
+      --paper: #ffffff;
+      --background: #f4f7fb;
+      --border: #dce4ee;
+      --green: #167447;
+      --green-light: #e8f7ef;
+      --red: #b42318;
+      --red-light: #fff0ee;
+      --shadow: 0 8px 24px rgba(16, 40, 74, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-wrap {
+      max-width: 1180px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 3px;
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    .menu-toggle {
+      display: none;
+      color: white;
+      background: transparent;
+      border: 1px solid #8294ad;
+      border-radius: 8px;
+      padding: 7px 11px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.91rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      padding: 66px 20px 58px;
+      color: white;
+      background: linear-gradient(135deg, #10284a, #185d98);
+    }
+
+    .hero-inner,
+    main,
+    .footer-inner {
+      width: min(1100px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.83rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 14px 0;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.14;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: #e2ebf7;
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 17px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+    }
+
+    .button:hover {
+      filter: brightness(0.94);
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .button-outline {
+      background: transparent;
+      border-color: #b9cce2;
+      color: white;
+    }
+
+    .button-dark-outline {
+      background: white;
+      border-color: var(--border);
+      color: var(--navy);
+    }
+
+    main {
+      padding: 28px 0 54px;
+    }
+
+    .section {
+      margin: 26px 0;
+      padding: clamp(20px, 4vw, 34px);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      line-height: 1.25;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    h3 {
+      color: var(--navy);
+      line-height: 1.35;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .three-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 19px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .stage-number {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 20px;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 0.79rem;
+      font-weight: 800;
+    }
+
+    .card ul,
+    .lesson ul {
+      padding-left: 21px;
+    }
+
+    .note {
+      padding: 15px 17px;
+      border-left: 4px solid var(--gold);
+      border-radius: 5px;
+      background: #fff8e8;
+    }
+
+    .info {
+      padding: 15px 17px;
+      border-left: 4px solid var(--blue);
+      border-radius: 5px;
+      background: var(--blue-light);
+    }
+
+    .formula {
+      margin: 13px 0;
+      padding: 14px 16px;
+      border: 1px dashed #aac2dc;
+      border-radius: 9px;
+      background: #f5f9fe;
+      color: var(--navy);
+      font-size: 1.05rem;
+      font-weight: 700;
+      overflow-x: auto;
+    }
+
+    .worked {
+      margin-top: 15px;
+      padding: 16px;
+      border-radius: 10px;
+      background: #f3f8f4;
+      border-left: 4px solid var(--green);
+    }
+
+    .worked h4 {
+      margin: 0 0 8px;
+      color: var(--green);
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+
+    table {
+      width: 100%;
+      min-width: 300px;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+
+    th,
+    td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    th {
+      background: var(--navy);
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f5f8fc;
+    }
+
+    .lesson {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      scroll-margin-top: 90px;
+    }
+
+    .lesson h3 {
+      margin-top: 0;
+    }
+
+    .graph-frame {
+      margin: 18px 0;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+    }
+
+    .graph-frame svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .graph-caption {
+      margin: 10px 2px 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .legend i {
+      display: inline-block;
+      width: 19px;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--blue);
+    }
+
+    .legend .cosine-line {
+      background: #d97706;
+    }
+
+    .legend .tangent-line {
+      background: #16835b;
+    }
+
+    .practice-item {
+      margin: 12px 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .practice-item summary {
+      padding: 15px;
+      background: #f5f8fc;
+      color: var(--navy);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .solution {
+      padding: 15px;
+      background: white;
+    }
+
+    .quiz-question {
+      margin: 18px 0;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+    }
+
+    .quiz-question legend {
+      padding: 0 5px;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .option {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 10px 0;
+      padding: 9px 10px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      background: #f2f7fc;
+    }
+
+    .option input {
+      margin-top: 6px;
+      flex: 0 0 auto;
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 12px;
+      padding: 11px 13px;
+      border-radius: 8px;
+    }
+
+    .feedback.correct {
+      display: block;
+      background: var(--green-light);
+      color: var(--green);
+    }
+
+    .feedback.incorrect {
+      display: block;
+      background: var(--red-light);
+      color: var(--red);
+    }
+
+    .progress-track {
+      height: 12px;
+      margin: 12px 0;
+      border-radius: 20px;
+      background: #e6edf5;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 0;
+      height: 100%;
+      background: var(--green);
+      transition: width 0.2s ease;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #edf1f6;
+    }
+
+    .check-item input {
+      margin-top: 6px;
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+    }
+
+    .resource-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .resource-links a {
+      display: inline-block;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      text-decoration: none;
+      background: white;
+      font-weight: 700;
+    }
+
+    .resource-links a:hover {
+      background: var(--blue-light);
+    }
+
+    .site-footer {
+      padding: 28px 16px;
+      background: var(--navy);
+      color: #e2ebf7;
+    }
+
+    .site-footer a {
+      color: var(--gold);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.89rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 800px) {
+      .three-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-wrap {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0 5px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 5px 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 43px 0;
+      }
+
+      .hero-inner,
+      main,
+      .footer-inner {
+        width: min(100% - 22px, 1100px);
+      }
+
+      .section {
+        padding: 17px;
+      }
+
+      .lesson {
+        padding: 15px;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        Mr Chinonso Mathematics Elite Academy
+        <span>Foundational to Elite Mathematics</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        id="menu-toggle">
+        Menu ☰
+      </button>
+
+      <nav class="nav-links" id="site-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="waec-mathematics.html">WAEC Hub</a>
+        <a href="#learning-path">Learning Path</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#practice">Practice</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#enquire">Enquire</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Mathematics Learning Hub</span>
+
+      <h1>Graphs &amp; Functions: From Foundations to Advanced Applications</h1>
+
+      <p>
+        Learn to plot, interpret and analyse mathematical graphs with confidence.
+        Progress from Cartesian coordinates and straight lines to quadratic
+        functions, transformations and trigonometric function graphs.
+      </p>
+
+      <p>
+        <strong>Master Mathematics. Think like an Elite Mathematician.</strong>
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-gold" href="#learning-path">Explore the Learning Path</a>
+        <a class="button button-outline" href="#practice">Start Practice</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="learning-path">
+      <div class="section-heading">
+        <h2>Our Three-Stage Learning Pathway</h2>
+        <p>
+          Build a secure foundation, develop examination proficiency, and
+          progress towards advanced mathematical applications.
+        </p>
+      </div>
+
+      <div class="three-grid">
+        <article class="card">
+          <span class="stage-number">Stage 1</span>
+          <h3>Foundational Understanding</h3>
+          <ul>
+            <li>Cartesian coordinates, axes and ordered pairs.</li>
+            <li>Plotting points and constructing tables of values.</li>
+            <li>Linear graphs, gradients and intercepts.</li>
+            <li>Reading and interpreting graphs.</li>
+            <li>Recognising basic sine and cosine curves.</li>
+          </ul>
+          <a href="#coordinates">Begin foundations →</a>
+        </article>
+
+        <article class="card">
+          <span class="stage-number">Stage 2</span>
+          <h3>Examination Mastery</h3>
+          <ul>
+            <li>Linear equations and graphical solutions of simultaneous equations.</li>
+            <li>Quadratic graphs, roots, turning points and intercepts.</li>
+            <li>Reciprocal and other syllabus-relevant nonlinear graphs.</li>
+            <li>Graphs of sine, cosine and tangent functions.</li>
+            <li>Trigonometric tables, plotting and interpretation.</li>
+            <li>Amplitude, period, range, intercepts and symmetry.</li>
+            <li>Degrees and radians where required.</li>
+          </ul>
+          <a href="#trigonometric-graphs">Study graph families →</a>
+        </article>
+
+        <article class="card">
+          <span class="stage-number">Stage 3</span>
+          <h3>Advanced Applications</h3>
+          <ul>
+            <li>Transformations of functions.</li>
+            <li>Amplitude, period, phase and vertical shifts.</li>
+            <li>Trigonometric graphs over specified intervals.</li>
+            <li>Solving equations graphically.</li>
+            <li>Modelling waves and periodic phenomena.</li>
+            <li>International and pre-university extension problems.</li>
+          </ul>
+          <a href="#transformations">Explore transformations →</a>
+        </article>
+      </div>
+
+      <div class="note" style="margin-top:20px">
+        <strong>Syllabus guidance:</strong> The stages are a teaching pathway,
+        not a claim that every listed topic is compulsory in every examination.
+        Check the current WAEC, NECO, JAMB, IGCSE, SAT, IB or pre-university
+        syllabus applicable to your course and examination year.
+      </div>
+    </section>
+
+    <section class="section" id="lessons">
+      <div class="section-heading">
+        <h2>Lessons, Formulas and Worked Examples</h2>
+        <p>Work through the lessons in sequence. Show your calculations and label your graph axes.</p>
+      </div>
+
+      <article class="lesson" id="coordinates">
+        <h3>Lesson 1: Cartesian Coordinates and Ordered Pairs</h3>
+
+        <p>
+          The Cartesian plane is formed by two perpendicular number lines:
+          the horizontal <strong>x-axis</strong> and the vertical
+          <strong>y-axis</strong>. They meet at the origin, \((0,0)\).
+        </p>
+
+        <p>
+          A point is represented by an ordered pair \((x,y)\). Move horizontally
+          first, then vertically. The order matters: \((3,2)\) is not the same
+          point as \((2,3)\).
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>The four quadrants</h3>
+            <ul>
+              <li>Quadrant I: \(x\) positive, \(y\) positive.</li>
+              <li>Quadrant II: \(x\) negative, \(y\) positive.</li>
+              <li>Quadrant III: both coordinates negative.</li>
+              <li>Quadrant IV: \(x\) positive, \(y\) negative.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Plotting checklist</h3>
+            <ol>
+              <li>Draw perpendicular axes.</li>
+              <li>Choose a consistent scale.</li>
+              <li>Label both axes and the origin.</li>
+              <li>Plot each ordered pair accurately.</li>
+              <li>Label the points when required.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="worked">
+          <h4>Worked example</h4>
+          <p>Plot \(A(2,3)\), \(B(-2,1)\) and \(C(-1,-2)\).</p>
+          <p>
+            \(A\) is in Quadrant I, \(B\) is in Quadrant II, and \(C\) is in
+            Quadrant III. Plot each point by moving along the x-axis direction
+            first and then to its y-coordinate.
+          </p>
+        </div>
+      </article>
+
+      <article class="lesson" id="tables">
+        <h3>Lesson 2: Tables of Values and Plotting Functions</h3>
+
+        <p>
+          A function rule tells you how to calculate \(y\) from a chosen value
+          of \(x\). A table organises the pairs before you plot them.
+        </p>
+
+        <div class="formula">For \(y=2x+1\), substitute each selected value of \(x\).</div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>\(x\)</th>
+                <th>Calculation</th>
+                <th>\(y=2x+1\)</th>
+                <th>Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>-2</td><td>\(2(-2)+1\)</td><td>-3</td><td>\((-2,-3)\)</td></tr>
+              <tr><td>-1</td><td>\(2(-1)+1\)</td><td>-1</td><td>\((-1,-1)\)</td></tr>
+              <tr><td>0</td><td>\(2(0)+1\)</td><td>1</td><td>\((0,1)\)</td></tr>
+              <tr><td>1</td><td>\(2(1)+1\)</td><td>3</td><td>\((1,3)\)</td></tr>
+              <tr><td>2</td><td>\(2(2)+1\)</td><td>5</td><td>\((2,5)\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="worked">
+          <h4>Worked example</h4>
+          <p>
+            Calculate the value of \(y\) when \(x=3\) for \(y=2x+1\).
+          </p>
+          <p>\(y=2(3)+1=7\).</p>
+          <p>The corresponding point is \((3,7)\).</p>
+        </div>
+
+        <div class="info">
+          <strong>Graphing rule:</strong> Plot points accurately, use a consistent
+          scale, and join them according to the nature of the function. A linear
+          function produces a straight line; a quadratic function produces a curve.
+        </div>
+      </article>
+
+      <article class="lesson" id="linear">
+        <h3>Lesson 3: Linear Graphs, Gradients and Intercepts</h3>
+
+        <p>A linear function has the form:</p>
+
+        <div class="formula">\(y=mx+c\)</div>
+
+        <ul>
+          <li>\(m\) is the gradient or slope.</li>
+          <li>\(c\) is the y-intercept, where the graph crosses the y-axis.</li>
+        </ul>
+
+        <div class="formula">
+          \(\displaystyle m=\frac{y_2-y_1}{x_2-x_1}\)
+        </div>
+
+        <p>
+          The gradient measures vertical change divided by horizontal change.
+          A positive gradient rises from left to right; a negative gradient falls.
+        </p>
+
+        <div class="worked">
+          <h4>Worked example</h4>
+          <p>Find the gradient of the line through \(A(1,3)\) and \(B(4,9)\).</p>
+          <p>
+            \(\displaystyle m=\frac{9-3}{4-1}=\frac{6}{3}=2\).
+          </p>
+          <p>The gradient is \(2\).</p>
+        </div>
+
+        <h4>Worked graph: \(y=2x+1\)</h4>
+
+        <div class="graph-frame">
+          <svg viewBox="0 0 400 300" role="img" aria-labelledby="linear-graph-title linear-graph-desc">
+            <title id="linear-graph-title">Straight-line graph of y equals 2x plus 1</title>
+            <desc id="linear-graph-desc">A straight line rises from left to right and crosses the y-axis at 1.</desc>
+            <defs>
+              <pattern id="linear-grid" width="30" height="25" patternUnits="userSpaceOnUse" x="50" y="25">
+                <path d="M 30 0 L 0 0 0 25" fill="none" stroke="#dce4ee" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect x="50" y="25" width="300" height="250" fill="url(#linear-grid)" stroke="#cbd5e1"/>
+            <line x1="50" y1="150" x2="365" y2="150" stroke="#243247" stroke-width="1.5"/>
+            <line x1="200" y1="285" x2="200" y2="15" stroke="#243247" stroke-width="1.5"/>
+            <polygon points="365,150 356,145 356,155" fill="#243247"/>
+            <polygon points="200,15 195,24 205,24" fill="#243247"/>
+            <path d="M 65 262.5 L 335 37.5" stroke="#1769aa" stroke-width="3" fill="none"/>
+            <circle cx="200" cy="125" r="4" fill="#1769aa"/>
+            <text x="365" y="169" font-size="12" fill="#243247">x</text>
+            <text x="211" y="18" font-size="12" fill="#243247">y</text>
+            <text x="205" y="165" font-size="11" fill="#243247">0</text>
+            <text x="211" y="128" font-size="11" fill="#1769aa">(0,1)</text>
+            <text x="267" y="57" font-size="12" fill="#1769aa">y = 2x + 1</text>
+            <text x="350" y="285" font-size="10" fill="#607086">Illustrative graph</text>
+          </svg>
+          <p class="graph-caption">
+            The graph has a positive gradient of 2 and a y-intercept of 1.
+          </p>
+        </div>
+      </article>
+
+      <article class="lesson" id="simultaneous">
+        <h3>Lesson 4: Solving Simultaneous Equations Graphically</h3>
+
+        <p>
+          The solution of two simultaneous linear equations is the point where
+          their graphs intersect. The coordinates of the intersection satisfy
+          both equations.
+        </p>
+
+        <div class="worked">
+          <h4>Worked example</h4>
+          <p>Solve graphically:</p>
+          <p>\(y=x+1\) and \(y=-x+5\).</p>
+          <p>
+            At the intersection, the y-values are equal:
+            \(x+1=-x+5\).
+          </p>
+          <p>\(2x=4\), so \(x=2\).</p>
+          <p>\(y=2+1=3\).</p>
+          <p><strong>Solution: \((2,3)\).</strong></p>
+          <p>
+            To solve graphically, plot both lines on the same axes and read
+            the coordinates of their intersection.
+          </p>
+        </div>
+
+        <div class="note">
+          Parallel distinct lines have no intersection, so the equations have
+          no common solution. Coincident lines share all their points, so the
+          equations have infinitely many solutions.
+        </div>
+      </article>
+
+      <article class="lesson" id="quadratic">
+        <h3>Lesson 5: Quadratic Graphs, Roots and Turning Points</h3>
+
+        <p>A quadratic function has the form:</p>
+
+        <div class="formula">\(y=ax^2+bx+c,\quad a\ne0\)</div>
+
+        <ul>
+          <li>The graph is a parabola.</li>
+          <li>If \(a\) is positive, it opens upwards.</li>
+          <li>If \(a\) is negative, it opens downwards.</li>
+          <li>Roots are the x-values where the graph crosses or touches the x-axis.</li>
+          <li>The y-intercept is \(c\).</li>
+          <li>The turning point is the vertex of the parabola.</li>
+        </ul>
+
+        <div class="formula">
+          \(\displaystyle x_{\text{vertex}}=-\frac{b}{2a}\)
+        </div>
+
+        <div class="worked">
+          <h4>Worked example: \(y=x^2-4\)</h4>
+          <p>Find the roots and turning point.</p>
+          <p>At the roots, \(y=0\): \(x^2-4=0\).</p>
+          <p>\((x-2)(x+2)=0\), giving \(x=-2\) or \(x=2\).</p>
+          <p>The roots are \((-2,0)\) and \((2,0)\).</p>
+          <p>
+            The symmetry axis is \(x=0\). Substituting \(x=0\) gives \(y=-4\),
+            so the turning point is \((0,-4)\).
+          </p>
+        </div>
+
+        <div class="graph-frame">
+          <svg viewBox="0 0 400 300" role="img" aria-labelledby="quadratic-title quadratic-desc">
+            <title id="quadratic-title">Graph of y equals x squared minus four</title>
+            <desc id="quadratic-desc">An upward-opening parabola crosses the x-axis at negative two and two and has a minimum at zero, negative four.</desc>
+            <defs>
+              <pattern id="quad-grid" width="30" height="25" patternUnits="userSpaceOnUse" x="50" y="25">
+                <path d="M30 0H0V25" fill="none" stroke="#dce4ee" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect x="50" y="25" width="300" height="250" fill="url(#quad-grid)" stroke="#cbd5e1"/>
+            <line x1="50" y1="175" x2="365" y2="175" stroke="#243247" stroke-width="1.5"/>
+            <line x1="200" y1="285" x2="200" y2="15" stroke="#243247" stroke-width="1.5"/>
+            <path d="M 104 25 Q 200 325 296 25" fill="none" stroke="#1769aa" stroke-width="3"/>
+            <circle cx="104" cy="175" r="4" fill="#b42318"/>
+            <circle cx="296" cy="175" r="4" fill="#b42318"/>
+            <circle cx="200" cy="275" r="4" fill="#b42318"/>
+            <text x="92" y="194" font-size="11" fill="#b42318">(-2,0)</text>
+            <text x="287" y="194" font-size="11" fill="#b42318">(2,0)</text>
+            <text x="206" y="267" font-size="11" fill="#b42318">(0,-4)</text>
+            <text x="350" y="193" font-size="12" fill="#243247">x</text>
+            <text x="210" y="19" font-size="12" fill="#243247">y</text>
+            <text x="223" y="55" font-size="12" fill="#1769aa">y = x² − 4</text>
+          </svg>
+          <p class="graph-caption">
+            The curve opens upwards and is symmetric about the y-axis.
+          </p>
+        </div>
+      </article>
+
+      <article class="lesson" id="nonlinear">
+        <h3>Lesson 6: Reciprocal and Other Nonlinear Graphs</h3>
+
+        <p>
+          Nonlinear functions do not generally produce straight-line graphs.
+          Their shapes and features depend on the function rule.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Reciprocal function</h3>
+            <div class="formula">\(y=\frac{1}{x},\quad x\ne0\)</div>
+            <ul>
+              <li>Undefined at \(x=0\).</li>
+              <li>Has two separate branches.</li>
+              <li>Approaches, but does not meet, the axes.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Cubic function</h3>
+            <div class="formula">\(y=x^3\)</div>
+            <ul>
+              <li>Passes through the origin.</li>
+              <li>Is an odd function.</li>
+              <li>Increases from left to right.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="worked">
+          <h4>Worked example</h4>
+          <p>Find \(y\) when \(x=-2,-1,1,2\) for \(y=1/x\).</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>\(x\)</th><th>-2</th><th>-1</th><th>1</th><th>2</th></tr></thead>
+              <tbody><tr><th>\(y\)</th><td>-0.5</td><td>-1</td><td>1</td><td>0.5</td></tr></tbody>
+            </table>
+          </div>
+          <p>
+            Plot the four points. Draw smooth branches in Quadrants I and III.
+            Do not connect the branches across \(x=0\).
+          </p>
+        </div>
+
+        <p class="small">
+          Other nonlinear graphs may include exponential, logarithmic and
+          higher-degree polynomial functions, depending on the syllabus.
+        </p>
+      </article>
+
+      <article class="lesson" id="trigonometric-graphs">
+        <h3>Lesson 7: Graphs of Trigonometric Functions</h3>
+
+        <p>
+          Trigonometric graphs describe repeating relationships between an
+          angle and a trigonometric ratio. They are important for studying
+          periodic behaviour and solving suitable equations.
+        </p>
+
+        <div class="info">
+          <strong>Angle units:</strong> The graphs below use degrees, from
+          \(-360^\circ\) to \(360^\circ\). In radians, one full revolution
+          is \(2\pi\). Make sure you use the angle unit specified in the question.
+        </div>
+
+        <h4>A. Sine graph: \(y=\sin x\)</h4>
+
+        <div class="formula">
+          Range: \(-1\le y\le1\). Period: \(360^\circ\) or \(2\pi\) radians.
+        </div>
+
+        <div class="graph-frame">
+          <svg id="sine-graph" viewBox="0 0 640 300" role="img" aria-label="Sine function graph from negative 360 degrees to 360 degrees">
+            <text x="20" y="30" font-size="14" fill="#607086">Sine graph loads here.</text>
+          </svg>
+          <p class="graph-caption">
+            The sine curve starts at zero, reaches a maximum of 1, returns
+            to zero, reaches a minimum of -1, and repeats.
+          </p>
+        </div>
+
+        <h4>B. Cosine graph: \(y=\cos x\)</h4>
+
+        <div class="formula">
+          Range: \(-1\le y\le1\). Period: \(360^\circ\) or \(2\pi\) radians.
+        </div>
+
+        <div class="graph-frame">
+          <svg id="cosine-graph" viewBox="0 0 640 300" role="img" aria-label="Cosine function graph from negative 360 degrees to 360 degrees">
+            <text x="20" y="30" font-size="14" fill="#607086">Cosine graph loads here.</text>
+          </svg>
+          <p class="graph-caption">
+            The cosine curve starts at 1 when \(x=0^\circ\), reaches zero at
+            \(90^\circ\), reaches -1 at \(180^\circ\), and repeats every \(360^\circ\).
+          </p>
+        </div>
+
+        <h4>C. Tangent graph: \(y=\tan x\)</h4>
+
+        <div class="formula">
+          Period: \(180^\circ\) or \(\pi\) radians. Range: all real numbers.
+        </div>
+
+        <div class="graph-frame">
+          <svg id="tangent-graph" viewBox="0 0 640 300" role="img" aria-label="Tangent function graph showing separate branches and vertical asymptotes">
+            <text x="20" y="30" font-size="14" fill="#607086">Tangent graph loads here.</text>
+          </svg>
+          <p class="graph-caption">
+            Tangent is undefined at \(90^\circ+180^\circ k\), where \(k\) is
+            an integer. The dashed lines indicate vertical asymptotes, not
+            points on the graph.
+          </p>
+        </div>
+
+        <h4>Trigonometric graph tables</h4>
+
+        <p>
+          These standard angles help students construct the graphs of sine,
+          cosine and tangent. Tangent is undefined at \(90^\circ\) and \(270^\circ\).
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Angle \(x\)</th>
+                <th>\(\sin x\)</th>
+                <th>\(\cos x\)</th>
+                <th>\(\tan x\)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>0°</td><td>0</td><td>1</td><td>0</td></tr>
+              <tr><td>30°</td><td>1/2</td><td>\(\sqrt3/2\)</td><td>\(1/\sqrt3\)</td></tr>
+              <tr><td>45°</td><td>\(\sqrt2/2\)</td><td>\(\sqrt2/2\)</td><td>1</td></tr>
+              <tr><td>60°</td><td>\(\sqrt3/2\)</td><td>1/2</td><td>\(\sqrt3\)</td></tr>
+              <tr><td>90°</td><td>1</td><td>0</td><td>Undefined</td></tr>
+              <tr><td>180°</td><td>0</td><td>-1</td><td>0</td></tr>
+              <tr><td>270°</td><td>-1</td><td>0</td><td>Undefined</td></tr>
+              <tr><td>360°</td><td>0</td><td>1</td><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="worked">
+          <h4>Worked example: finding values from a sine graph</h4>
+          <p>
+            Find \(\sin 30^\circ\), \(\sin 90^\circ\) and \(\sin 180^\circ\).
+          </p>
+          <p>
+            From the standard sine values or the graph:
+            \(\sin30^\circ=\frac12\),
+            \(\sin90^\circ=1\), and \(\sin180^\circ=0\).
+          </p>
+        </div>
+
+        <h4>Key features to identify</h4>
+        <ul>
+          <li><strong>Amplitude:</strong> for \(y=a\sin x\) or \(y=a\cos x\), the amplitude is \(|a|\).</li>
+          <li><strong>Period:</strong> the horizontal length of one complete cycle.</li>
+          <li><strong>Range:</strong> the set of possible y-values.</li>
+          <li><strong>Intercepts:</strong> points where the graph crosses an axis.</li>
+          <li><strong>Symmetry:</strong> sine and tangent are odd functions; cosine is even.</li>
+          <li><strong>Asymptotes:</strong> tangent has vertical asymptotes where cosine is zero.</li>
+        </ul>
+
+        <div class="note">
+          <strong>Important distinction:</strong> Sine and cosine are defined
+          for every real angle. Tangent is undefined where \(\cos x=0\).
+          Never join separate tangent branches across an asymptote.
+        </div>
+      </article>
+
+      <article class="lesson" id="transformations">
+        <h3>Lesson 8: Transformations of Functions</h3>
+
+        <p>
+          Transformations change the position, size or orientation of a graph.
+          The exact transformations covered in an examination depend on its syllabus.
+        </p>
+
+        <div class="formula">
+          \(y=a\sin(bx)\), \(\qquad y=a\cos(bx)\)
+        </div>
+
+        <ul>
+          <li>\(|a|\) determines the amplitude.</li>
+          <li>For nonzero \(b\), the period in degrees is \(360^\circ/|b|\).</li>
+          <li>The period in radians is \(2\pi/|b|\).</li>
+          <li>A negative \(a\) reflects the graph across the x-axis.</li>
+          <li>\(y=f(x)+d\) shifts a graph vertically by \(d\).</li>
+          <li>\(y=f(x-h)\) shifts a graph horizontally by \(h\).</li>
+        </ul>
+
+        <div class="worked">
+          <h4>Worked example</h4>
+          <p>Find the amplitude and period of \(y=3\sin(2x)\).</p>
+          <p>Amplitude \(=|3|=3\).</p>
+          <p>
+            Period \(=360^\circ/2=180^\circ\), or \(\pi\) radians.
+          </p>
+          <p>
+            The graph ranges from -3 to 3 and completes one cycle in \(180^\circ\).
+          </p>
+        </div>
+
+        <p class="small">
+          Phase shifts, combined transformations and more advanced trigonometric
+          modelling may be included in international or pre-university courses.
+        </p>
+      </article>
+
+      <article class="lesson" id="applications">
+        <h3>Lesson 9: Solving Equations and Modelling Real Situations</h3>
+
+        <p>
+          Graphs can represent the relationship between quantities such as
+          distance and time, costs and output, or the height of a periodic wave.
+        </p>
+
+        <div class="worked">
+          <h4>Worked example: graphical solution</h4>
+          <p>
+            Suppose a graph of \(y=x^2-4\) is drawn. To solve \(x^2-4=0\)
+            graphically, locate where the curve crosses the x-axis.
+          </p>
+          <p>The intersections occur at \(x=-2\) and \(x=2\).</p>
+          <p>
+            For \(x^2-4=5\), draw or consider the horizontal line \(y=5\).
+            Its intersections with the parabola give \(x=\pm3\).
+          </p>
+        </div>
+
+        <div class="info">
+          <strong>Interpreting a real-world graph:</strong> read the axis
+          labels and units first, identify the scale, state values with units,
+          and distinguish interpolation (within known data) from extrapolation
+          (beyond the data).
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="practice">
+      <div class="section-heading">
+        <h2>Examination Practice with Worked Solutions</h2>
+        <p>Attempt each question before opening its solution.</p>
+      </div>
+
+      <details class="practice-item">
+        <summary>Question 1 — Gradient of a straight line</summary>
+        <div class="solution">
+          <p>Find the gradient of the line passing through \((2,5)\) and \((6,13)\).</p>
+          <p>
+            <strong>Solution:</strong>
+            \(\displaystyle m=\frac{13-5}{6-2}=\frac84=2\).
+          </p>
+        </div>
+      </details>
+
+      <details class="practice-item">
+        <summary>Question 2 — Table of values</summary>
+        <div class="solution">
+          <p>Find \(y\) when \(x=-2,0,2\) for \(y=x^2+1\).</p>
+          <p>
+            <strong>Solution:</strong> the values are \(5,1,5\), respectively.
+            The corresponding points are \((-2,5)\), \((0,1)\) and \((2,5)\).
+          </p>
+        </div>
+      </details>
+
+      <details class="practice-item">
+        <summary>Question 3 — Quadratic roots</summary>
+        <div class="solution">
+          <p>Find the roots of \(y=x^2-9\).</p>
+          <p>
+            <strong>Solution:</strong> set \(y=0\). Then
+            \(x^2-9=0\), so \((x-3)(x+3)=0\).
+            Therefore, \(x=-3\) or \(x=3\).
+          </p>
+        </div>
+      </details>
+
+      <details class="practice-item">
+        <summary>Question 4 — Simultaneous equations</summary>
+        <div class="solution">
+          <p>Solve \(y=2x\) and \(y=-x+6\).</p>
+          <p>
+            <strong>Solution:</strong> at the intersection,
+            \(2x=-x+6\). Hence \(3x=6\), \(x=2\), and \(y=4\).
+            The intersection is \((2,4)\).
+          </p>
+        </div>
+      </details>
+
+      <details class="practice-item">
+        <summary>Question 5 — Sine graph</summary>
+        <div class="solution">
+          <p>State the maximum value and period of \(y=\sin x\), where \(x\) is measured in degrees.</p>
+          <p>
+            <strong>Solution:</strong> the maximum value is \(1\), and the
+            period is \(360^\circ\).
+          </p>
+        </div>
+      </details>
+
+      <details class="practice-item">
+        <summary>Question 6 — Tangent graph</summary>
+        <div class="solution">
+          <p>State the period of \(y=\tan x\) and identify its first positive vertical asymptote.</p>
+          <p>
+            <strong>Solution:</strong> the period is \(180^\circ\).
+            The first positive vertical asymptote is at \(x=90^\circ\).
+          </p>
+        </div>
+      </details>
+
+      <details class="practice-item">
+        <summary>Question 7 — Function transformation</summary>
+        <div class="solution">
+          <p>Find the amplitude and period of \(y=2\cos(3x)\), with \(x\) in degrees.</p>
+          <p>
+            <strong>Solution:</strong> amplitude \(=2\).
+            Period \(=360^\circ/3=120^\circ\).
+          </p>
+        </div>
+      </details>
+
+      <details class="practice-item">
+        <summary>Question 8 — Reciprocal function</summary>
+        <div class="solution">
+          <p>Why is \(x=0\) excluded from the domain of \(y=1/x\)?</p>
+          <p>
+            <strong>Solution:</strong> substituting \(x=0\) would require
+            division by zero, which is undefined.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <section class="section" id="quiz">
+      <div class="section-heading">
+        <h2>Interactive Graphs &amp; Functions Quiz</h2>
+        <p>Answer all six questions, submit your answers, and review the feedback.</p>
+      </div>
+
+      <form id="quiz-form">
+        <fieldset class="quiz-question" data-answer="b"
+          data-explanation="The gradient is (9 − 3) ÷ (4 − 1) = 6 ÷ 3 = 2.">
+          <legend>1. What is the gradient of the line through (1, 3) and (4, 9)?</legend>
+          <label class="option"><input type="radio" name="q1" value="a" required> 1</label>
+          <label class="option"><input type="radio" name="q1" value="b"> 2</label>
+          <label class="option"><input type="radio" name="q1" value="c"> 3</label>
+          <label class="option"><input type="radio" name="q1" value="d"> 6</label>
+          <div class="feedback" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="quiz-question" data-answer="c"
+          data-explanation="The roots occur when x² − 4 = 0, giving x = −2 and x = 2.">
+          <legend>2. What are the roots of \(y=x^2-4\)?</legend>
+          <label class="option"><input type="radio" name="q2" value="a" required> 0 and 4</label>
+          <label class="option"><input type="radio" name="q2" value="b"> -4 and 4</label>
+          <label class="option"><input type="radio" name="q2" value="c"> -2 and 2</label>
+          <label class="option"><input type="radio" name="q2" value="d"> -2 and 0</label>
+          <div class="feedback" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="quiz-question" data-answer="a"
+          data-explanation="The y-intercept is found by setting x = 0. In y = 3x − 5, this gives y = −5.">
+          <legend>3. What is the y-intercept of \(y=3x-5\)?</legend>
+          <label class="option"><input type="radio" name="q3" value="a" required> -5</label>
+          <label class="option"><input type="radio" name="q3" value="b"> 3</label>
+          <label class="option"><input type="radio" name="q3" value="c"> 5</label>
+          <label class="option"><input type="radio" name="q3" value="d"> -3</label>
+          <div class="feedback" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="quiz-question" data-answer="d"
+          data-explanation="The sine function completes one full cycle every 360 degrees.">
+          <legend>4. What is the period of \(y=\sin x\) when x is measured in degrees?</legend>
+          <label class="option"><input type="radio" name="q4" value="a" required> 90°</label>
+          <label class="option"><input type="radio" name="q4" value="b"> 180°</label>
+          <label class="option"><input type="radio" name="q4" value="c"> 270°</label>
+          <label class="option"><input type="radio" name="q4" value="d"> 360°</label>
+          <div class="feedback" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="quiz-question" data-answer="b"
+          data-explanation="The tangent function is undefined where cos x = 0, including x = 90 degrees.">
+          <legend>5. At which angle is \(\tan x\) undefined in the interval from 0° to 180°?</legend>
+          <label class="option"><input type="radio" name="q5" value="a" required> 0°</label>
+          <label class="option"><input type="radio" name="q5" value="b"> 90°</label>
+          <label class="option"><input type="radio" name="q5" value="c"> 120°</label>
+          <label class="option"><input type="radio" name="q5" value="d"> 180°</label>
+          <div class="feedback" aria-live="polite"></div>
+        </fieldset>
+
+        <fieldset class="quiz-question" data-answer="c"
+          data-explanation="The amplitude is |2| = 2, and the period is 360 degrees divided by 3, which is 120 degrees.">
+          <legend>6. What are the amplitude and period of \(y=2\cos(3x)\), with x in degrees?</legend>
+          <label class="option"><input type="radio" name="q6" value="a" required> Amplitude 3, period 120°</label>
+          <label class="option"><input type="radio" name="q6" value="b"> Amplitude 2, period 360°</label>
+          <label class="option"><input type="radio" name="q6" value="c"> Amplitude 2, period 120°</label>
+          <label class="option"><input type="radio" name="q6" value="d"> Amplitude 6, period 180°</label>
+          <div class="feedback" aria-live="polite"></div>
+        </fieldset>
+
+        <button class="button" type="submit">Submit Answers</button>
+        <button class="button button-dark-outline" type="button" id="reset-quiz">Reset Quiz</button>
+      </form>
+
+      <div id="quiz-result" class="info" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="section" id="mastery">
+      <div class="section-heading">
+        <h2>Graphs &amp; Functions Mastery Checklist</h2>
+        <p>Tick each skill after you can demonstrate it without relying on the worked solution.</p>
+      </div>
+
+      <div class="progress-track" role="progressbar" aria-label="Mastery checklist progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <p id="progress-label" aria-live="polite">0 of 10 skills mastered (0%).</p>
+
+      <div id="checklist">
+        <label class="check-item"><input type="checkbox"> I can identify Cartesian coordinates and plot ordered pairs.</label>
+        <label class="check-item"><input type="checkbox"> I can construct a table of values and plot a graph accurately.</label>
+        <label class="check-item"><input type="checkbox"> I can calculate a gradient and identify intercepts.</label>
+        <label class="check-item"><input type="checkbox"> I can solve simultaneous linear equations graphically.</label>
+        <label class="check-item"><input type="checkbox"> I can identify quadratic roots and turning points.</label>
+        <label class="check-item"><input type="checkbox"> I can interpret reciprocal and other nonlinear graphs.</label>
+        <label class="check-item"><input type="checkbox"> I can plot and interpret sine and cosine graphs.</label>
+        <label class="check-item"><input type="checkbox"> I can identify tangent periods and asymptotes.</label>
+        <label class="check-item"><input type="checkbox"> I can calculate amplitude and period for transformed trigonometric graphs.</label>
+        <label class="check-item"><input type="checkbox"> I can solve appropriate graphical problems and explain my conclusions.</label>
+      </div>
+    </section>
+
+    <section class="section" id="related-learning">
+      <div class="section-heading">
+        <h2>Continue Your Mathematics Journey</h2>
+        <p>Explore related Academy learning resources.</p>
+      </div>
+
+      <div class="resource-links">
+        <a href="waec-mathematics.html">WAEC Mathematics Hub</a>
+        <a href="waec-2026-2027-mathematics.html">WAEC 2026/2027 Hub</a>
+        <a href="trigonometry.html">Trigonometry Hub</a>
+        <a href="statistics-probability.html">Statistics &amp; Probability</a>
+        <a href="plane-geometry.html">Plane Geometry</a>
+        <a href="mensuration.html">Mensuration</a>
+        <a href="quadratic-equations.html">Quadratic Equations</a>
+        <a href="quadratic-functions.html">Quadratic Functions</a>
+        <a href="number-base-system.html">Number Base System</a>
+      </div>
+
+      <div class="note" style="margin-top:22px">
+        <strong>Study advice:</strong> Graph questions often award marks for
+        correct tables, accurate plotting, suitable scales, labels and
+        interpretation. Show your method, not only your final answer.
+      </div>
+    </section>
+
+    <section class="section" id="enquire">
+      <div class="section-heading">
+        <h2>Learn with Mr Chinonso Mathematics Elite Academy</h2>
+        <p>
+          Strengthen your mathematical foundations, prepare systematically for
+          examinations, and progress towards advanced applications.
+        </p>
+      </div>
+
+      <div class="hero-actions">
+        <a
+          class="button"
+          href="https://wa.me/2348063357348?text=Hello%20Mr%20Chinonso%20Mathematics%20Elite%20Academy.%20I%20would%20like%20to%20enquire%20about%20Graphs%20and%20Functions%20lessons."
+          target="_blank"
+          rel="noopener noreferrer">Enquire via WhatsApp</a>
+
+        <a
+          class="button button-dark-outline"
+          href="mailto:mrchinonsomathsacademy@gmail.com?subject=Graphs%20and%20Functions%20Learning%20Enquiry">Email the Academy</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Mr Chinonso Mathematics Elite Academy</strong>
+        <p>Master Mathematics. Think like an Elite Mathematician.</p>
+      </div>
+      <div>
+        <p>© <span id="current-year">2026</span> Mr Chinonso Mathematics Elite Academy.</p>
+        <a href="index.html">Return to the Academy homepage</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const menuButton = document.getElementById("menu-toggle");
+      const navigation = document.getElementById("site-navigation");
+
+      menuButton.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.textContent = isOpen ? "Close ✕" : "Menu ☰";
+      });
+
+      navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navigation.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.textContent = "Menu ☰";
+        });
+      });
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      /*
+       * Draw degree-based trigonometric graphs in SVG.
+       * All trigonometric calculations are converted to radians internally.
+       */
+      function drawTrigGraph(svgId, functionName, color) {
+        const svg = document.getElementById(svgId);
+        const NS = "http://www.w3.org/2000/svg";
+
+        const W = 640;
+        const H = 300;
+        const left = 48;
+        const right = 18;
+        const top = 22;
+        const bottom = 40;
+        const plotW = W - left - right;
+        const plotH = H - top - bottom;
+
+        const xMin = -360;
+        const xMax = 360;
+        const yMin = functionName === "tan" ? -4 : -1.3;
+        const yMax = functionName === "tan" ? 4 : 1.3;
+
+        function xPixel(x) {
+          return left + (x - xMin) / (xMax - xMin) * plotW;
+        }
+
+        function yPixel(y) {
+          return top + (yMax - y) / (yMax - yMin) * plotH;
+        }
+
+        function element(name, attrs, textContent) {
+          const node = document.createElementNS(NS, name);
+          Object.keys(attrs || {}).forEach(function (key) {
+            node.setAttribute(key, attrs[key]);
+          });
+          if (textContent !== undefined) {
+            node.textContent = textContent;
+          }
+          return node;
+        }
+
+        svg.replaceChildren();
+
+        svg.appendChild(element("rect", {
+          x: left,
+          y: top,
+          width: plotW,
+          height: plotH,
+          rx: 3,
+          fill: "#ffffff",
+          stroke: "#dce4ee"
+        }));
+
+        const yTicks = functionName === "tan"
+          ? [-4, -2, 0, 2, 4]
+          : [-1, -0.5, 0, 0.5, 1];
+
+        yTicks.forEach(function (y) {
+          const py = yPixel(y);
+
+          svg.appendChild(element("line", {
+            x1: left,
+            y1: py,
+            x2: W - right,
+            y2: py,
+            stroke: y === 0 ? "#475569" : "#e2e8f0",
+            "stroke-width": y === 0 ? 1.5 : 1
+          }));
+
+          svg.appendChild(element("text", {
+            x: left - 8,
+            y: py + 4,
+            "text-anchor": "end",
+            "font-size": 11,
+            fill: "#475569"
+          }, String(y)));
+        });
+
+        for (let x = -360; x <= 360; x += 90) {
+          const px = xPixel(x);
+
+          svg.appendChild(element("line", {
+            x1: px,
+            y1: top,
+            x2: px,
+            y2: H - bottom,
+            stroke: x === 0 ? "#475569" : "#e2e8f0",
+            "stroke-width": x === 0 ? 1.5 : 1
+          }));
+
+          svg.appendChild(element("text", {
+            x: px,
+            y: H - bottom + 18,
+            "text-anchor": "middle",
+            "font-size": 10,
+            fill: "#475569"
+          }, String(x) + "°"));
+        }
+
+        svg.appendChild(element("text", {
+          x: W - right - 3,
+          y: H - 8,
+          "text-anchor": "end",
+          "font-size": 11,
+          fill: "#475569"
+        }, "Angle (degrees)"));
+
+        if (functionName === "tan") {
+          [-270, -90, 90, 270].forEach(function (degree) {
+            const px = xPixel(degree);
+            svg.appendChild(element("line", {
+              x1: px,
+              y1: top,
+              x2: px,
+              y2: H - bottom,
+              stroke: "#b42318",
+              "stroke-width": 1.4,
+              "stroke-dasharray": "5 5"
+            }));
+          });
+        }
+
+        let pathData = "";
+        let penDown = false;
+        let previousY = null;
+        const step = 0.75;
+
+        for (let degree = xMin; degree <= xMax + step / 2; degree += step) {
+          const radians = degree * Math.PI / 180;
+          let y;
+
+          if (functionName === "sin") {
+            y = Math.sin(radians);
+          } else if (functionName === "cos") {
+            y = Math.cos(radians);
+          } else {
+            const cosine = Math.cos(radians);
+
+            if (Math.abs(cosine) < 0.018) {
+              penDown = false;
+              previousY = null;
+              continue;
+            }
+
+            y = Math.tan(radians);
+          }
+
+          if (!Number.isFinite(y) || y < yMin || y > yMax) {
+            penDown = false;
+            previousY = null;
+            continue;
+          }
+
+          if (
+            functionName === "tan" &&
+            previousY !== null &&
+            Math.abs(y - previousY) > 1.1
+          ) {
+            penDown = false;
+          }
+
+          const command = penDown ? "L" : "M";
+          pathData += command + xPixel(degree).toFixed(2) +
+            " " + yPixel(y).toFixed(2) + " ";
+
+          penDown = true;
+          previousY = y;
+        }
+
+        svg.appendChild(element("path", {
+          d: pathData,
+          fill: "none",
+          stroke: color,
+          "stroke-width": 2.5,
+          "stroke-linejoin": "round",
+          "stroke-linecap": "round"
+        }));
+
+        svg.appendChild(element("text", {
+          x: left + 9,
+          y: top + 16,
+          "font-size": 12,
+          "font-weight": 700,
+          fill: color
+        }, "y = " + functionName + "(x)"));
+      }
+
+      drawTrigGraph("sine-graph", "sin", "#1769aa");
+      drawTrigGraph("cosine-graph", "cos", "#d97706");
+      drawTrigGraph("tangent-graph", "tan", "#16835b");
+
+      /*
+       * Six-question quiz.
+       */
+      const quizForm = document.getElementById("quiz-form");
+      const quizResult = document.getElementById("quiz-result");
+      const questions = Array.from(
+        quizForm.querySelectorAll(".quiz-question")
+      );
+
+      quizForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let score = 0;
+        let unanswered = 0;
+
+        questions.forEach(function (question) {
+          const selected = question.querySelector("input:checked");
+          const feedback = question.querySelector(".feedback");
+          const correctAnswer = question.dataset.answer;
+          const explanation = question.dataset.explanation;
+
+          feedback.className = "feedback";
+
+          if (!selected) {
+            unanswered++;
+            feedback.classList.add("incorrect");
+            feedback.textContent =
+              "Not answered. Correct answer: " +
+              question.querySelector('input[value="' + correctAnswer + '"]')
+                .parentElement.textContent.trim() +
+              ". " + explanation;
+            return;
+          }
+
+          if (selected.value === correctAnswer) {
+            score++;
+            feedback.classList.add("correct");
+            feedback.textContent = "Correct. " + explanation;
+          } else {
+            const correctLabel = question.querySelector(
+              'input[value="' + correctAnswer + '"]'
+            ).parentElement.textContent.trim();
+
+            feedback.classList.add("incorrect");
+            feedback.textContent =
+              "Not quite. Correct answer: " + correctLabel +
+              ". " + explanation;
+          }
+        });
+
+        quizResult.hidden = false;
+        quizResult.textContent =
+          "Your score: " + score + " out of " + questions.length +
+          " (" + Math.round(score / questions.length * 100) +
+          "%)." +
+          (unanswered
+            ? " You left " + unanswered + " question(s) unanswered."
+            : "") +
+          " Review the feedback above, revisit the relevant lesson, and try again.";
+
+        quizResult.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
+        });
+      });
+
+      document.getElementById("reset-quiz").addEventListener("click", function () {
+        quizForm.reset();
+
+        questions.forEach(function (question) {
+          const feedback = question.querySelector(".feedback");
+          feedback.className = "feedback";
+          feedback.textContent = "";
+        });
+
+        quizResult.hidden = true;
+        quizResult.textContent = "";
+      });
+
+      /*
+       * Mastery checklist and progress indicator.
+       */
+      const checklist = document.getElementById("checklist");
+      const checkboxes = Array.from(
+        checklist.querySelectorAll('input[type="checkbox"]')
+      );
+      const progressFill = document.getElementById("progress-fill");
+      const progressLabel = document.getElementById("progress-label");
+      const progressTrack = document.getElementById("progress-track");
+
+      function updateProgress() {
+        const completed = checkboxes.filter(function (checkbox) {
+          return checkbox.checked;
+        }).length;
+
+        const total = checkboxes.length;
+        const percentage = Math.round(completed / total * 100);
+
+        progressFill.style.width = percentage + "%";
+        progressLabel.textContent =
+          completed + " of " + total + " skills mastered (" +
+          percentage + "%).";
+
+        progressTrack.setAttribute("aria-valuenow", String(completed));
+      }
+
+      checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", updateProgress);
+      });
+
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
